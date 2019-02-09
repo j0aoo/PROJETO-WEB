@@ -1,0 +1,43 @@
+• categoria
+id 
+nome 
+
+• cor
+id
+nome
+
+• carros  
+id
+id_categoria
+id_cor
+nome
+ano
+marca
+portas
+preco
+kilometragem
+gasolina
+motor
+acessorios
+
+•financiamento
+id
+nome
+email
+telefone
+parcelamento
+
+•porposta
+id
+nome
+email
+financiamento
+mensagem
+
+•cad_novidades
+id
+email
+
+•novidades
+id
+sobre
