@@ -52,6 +52,7 @@ body {
 	background-position: center center;
 	text-align: center;
 	background-attachment: relative;
+	position: relative;
 
 	-webkit-background-size:100%;
 	-moz-background-size:100%;
@@ -80,10 +81,25 @@ body {
 
 .nv-smv {
 	width: 100%;
-	min-height: 350px;
-	background-color: red;
+	min-height: 400px;
 	display: flex;
 	justify-content: space-between;
+}
+
+@media (max-width: 576px) {
+    .nv-smv {
+   		display: flex;
+   		flex-direction: column;
+		width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nv-smv {
+   		display: flex;
+   		flex-direction: column;
+		width: 100%;
+    }
 }
 
 .novos-h {
@@ -92,32 +108,77 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 }
 
 .seminovos-h {
 	width: 100%;
-	background-color: #000;
+	background-color: #1C1C1C;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 }
 
 .h-novos {
-	color: #fff;
+	color: #1C1C1C;
+	font-size: 55px;
+	font-family: Arial;
 }
 
 .h-semi {
-	color: #FFD700; 
+	color: #fff; 
+	font-size: 55px;
+	font-family: Arial;
 }
 
+.header-pn {
+	width: 70%;
+	padding: 35px;
+	color: #1C1C1C;
+}	
 
+.header-sn {
+	width: 70%;
+	padding: 35px;
+	color: #fff;
+}
 
+.ofertas {
+	min-height: 400px;
+}
 
+.h-txt-ofertas {
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px;
+}
 
+.txt-linha-h1 {
+	font-size: 45px;
+	padding: 6px;
+	font-weight: bold;
+	color: #1C1C1C;
+}
 
+.txt-linha-p {
+	font-size: 20px;
+	padding: 6px;
+	font-weight: bold;
+	color: #9C9C9C;
+}
 
+.carros-o {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 
-
-
-
-
+.img-car-index {
+	height: 200px;
+	padding: 15px;
+}
