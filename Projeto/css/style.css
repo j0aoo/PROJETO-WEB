@@ -27,7 +27,9 @@ body {
 	background-color: #FFD700;
 	display: flex;
 	justify-content: center;
-	align-items: center; 
+	align-items: center;
+	flex-wrap: no-wrap;
+	flex-direction: row;	
 }
 
 .ul-nav li {
@@ -40,3 +42,82 @@ body {
 	color: #000;
 	font-weight: bold;
 }
+
+.header {
+	background-image: url(https://www.brownesautosupplies.com/wp-content/uploads/2017/01/bg2.jpg);
+	min-height: 520px;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+	background-position: center center;
+	text-align: center;
+	background-attachment: relative;
+
+	-webkit-background-size:100%;
+	-moz-background-size:100%;
+	-o-background-size:100%;
+	background-size: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+
+.content-h {
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.txt-col-h {
+	font-size: 60px;
+	font-family: 'Lobster', cursive;
+} 
+
+.nv-smv {
+	width: 100%;
+	min-height: 350px;
+	background-color: red;
+	display: flex;
+	justify-content: space-between;
+}
+
+.novos-h {
+	width: 100%;
+	background-color: #FFD700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.seminovos-h {
+	width: 100%;
+	background-color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.h-novos {
+	color: #fff;
+}
+
+.h-semi {
+	color: #FFD700; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
