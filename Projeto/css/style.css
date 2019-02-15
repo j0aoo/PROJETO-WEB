@@ -120,6 +120,10 @@ body {
 	flex-direction: column;
 }
 
+.er {
+	text-decoration: none;
+}
+
 .h-novos {
 	color: #1C1C1C;
 	font-size: 55px;
@@ -178,7 +182,53 @@ body {
 	justify-content: center;
 }
 
+.itemCar {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
 .img-car-index {
-	height: 200px;
-	padding: 15px;
+	height: 155px;
+	padding: 10px;
+}
+
+.img-car-index:hover {
+	opacity: 0.7;
+	transition: 0.1s;
+	transform: scale(1.02);
+}
+
+.div-btn-car {
+	display: flex;
+	justify-content: center;
+}
+
+.btn-car {
+	border: 2px solid #FFD700;
+	padding: 20px 40px;
+	font-size: 20px;
+	text-decoration: none;
+	color: #1C1C1C;
+	font-weight: bold;
+	border-radius: 3px;
+	margin: 35px;
+}
+
+.h4 {
+	font-family: Arial; 
+	padding: 30px;
+}
+
+.prop-extra-contato {
+	background-color: #F8F8FF;
+	min-height: 400px; 
+	display: flex;
+	justify-content: center;
+}	
+
+.propaganda {
+	
 }
