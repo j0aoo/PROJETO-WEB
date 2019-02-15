@@ -222,13 +222,52 @@ body {
 	padding: 30px;
 }
 
-.prop-extra-contato {
-	background-color: #F8F8FF;
-	min-height: 400px; 
-	display: flex;
-	justify-content: center;
-}	
+.c-extras {
+	min-height: 500px;
+	background-color: #000;
+}
+
+.img-propaganda {
+	padding:20px; 
+}
 
 .propaganda {
-	
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+}
+
+.c-extras-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img-cs-extras {
+	height: 20px;
+}
+
+.mais {
+	width: 100%;
+	background-color: #EEEED1;
+	min-height: 100px;
+	min-height: 500px;
+}
+
+.propaganda {
+	width: 95%;
+	text-align: center;
+	background-attachment: relative;
+	position: relative;
+
+	-webkit-background-size:100%;
+	-moz-background-size:100%;
+	-o-background-size:100%;
+	background-size: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
