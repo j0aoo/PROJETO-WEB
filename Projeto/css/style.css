@@ -248,14 +248,15 @@ body {
 	height: 20px;
 }
 
-.mais {
+.mais-p {
 	width: 100%;
-	background-color: #EEEED1;
-	min-height: 100px;
+	background-color: #E8E8E8;
 	min-height: 500px;
 }
 
 .propaganda {
+	top: 30px;
+	margin-bottom: 70px;
 	width: 95%;
 	text-align: center;
 	background-attachment: relative;
@@ -270,4 +271,21 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+}
+
+.items {
+	display: flex;
+	justify-content: center; 
+	flex-wrap: wrap;
+}
+
+.item-port-p {
+	margin-top: 40px;
+	width: 250px;
+	background-color: #fff;
+	margin: 25px;
+}
+
+.img-item-port {
+	width: 250px;
 }
