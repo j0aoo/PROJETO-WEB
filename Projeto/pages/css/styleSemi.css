@@ -1,0 +1,211 @@
+* {
+  padding: 0 auto;
+  margin: 0;
+}
+
+body {
+	font-family: 'Playfair Display', serif;
+}
+
+.nav-menu {
+	width: 100%;
+	height: 80px;
+	background-color: #FFF;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.logo h1 {
+	font-family: 'Lobster', cursive;
+	font-size: 25px;
+}
+
+.bx-menu {
+	width: 100%;
+	height: 40px;
+	background-color: #FFD700;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: no-wrap;
+	flex-direction: row;	
+}
+
+.ul-nav li {
+	display: inline;
+	padding: 60px;
+}
+
+.ul-nav li a {
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
+
+.header {
+	background-image: url(https://www.socialbauru.com.br/wp-content/uploads/2018/04/feirao-carros-ibem-1240x540.png);
+	min-height: 520px;
+	background-repeat: no-repeat;
+	width: 100%;
+	background-position: center center;
+	text-align: center;
+	background-attachment: relative;
+	position: relative;
+
+	-webkit-background-size:100%;
+	-moz-background-size:100%;
+	-o-background-size:100%;
+	background-size: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.header-semi {
+	width: 100%;
+	height: 80px;
+	background-color: #F8F8FF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 23px;
+	font-family: 'Lobster', cursive;
+	box-shadow: 1px 1px 12px #4F4F4F;
+}
+
+.geral-filter {
+	width: 100%;
+	min-height: 170px;
+}
+
+.filter {
+	display: flex;
+	justify-content: center;
+	padding: 30px 0px;	
+}
+
+.geral-carros {
+	width: 100%;
+	min-height: 560px;
+	background-color: #F8F8FF;
+}
+
+.txt-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 0px;
+}
+
+.cars-semi {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.cars a {
+	width: 280px;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	height: 380px;
+	border-radius: 4px;
+	text-decoration: none;
+	border: 1px solid #CFCFCF;
+	margin: 20px;
+	padding: 2px;
+}
+
+.cars img {
+	max-height: 200px;
+	width: 280px;
+	border-radius: 4px;
+}
+
+.cars a p {
+	padding-left: 7px;
+}
+
+.cars a h3 {
+	color: #104E8B;
+	margin-top: 15px;
+	margin-bottom: 5px;
+	font-size: 20px;
+	padding-left: 10px;
+}
+
+.pre {
+	font-size: 20px;
+	margin: 5px;
+}
+
+.data, .km {
+	width: 30px;
+	height: 30px;
+	background-color: #00BFFF;
+	font-size: 12px;
+	color: #fff;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	margin: 7px;
+}
+
+.span-1, .span-2 {
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.final {
+	width: 100%;
+	min-height: 400px;
+	background-color: #FFF;
+}
+
+.logo-wolk {
+	display: flex;
+	justify-content: center;
+	padding: 55px;
+}
+
+.info-extra {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.info-extra .pt-1-extra h1 {
+	padding: 10px;
+}
+
+.info-extra .pt-1-extra a {
+	padding: 3px;
+	color: #1C1C1C;
+}
+
+.pt-2-f h4 {
+	padding: 7px;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.p1-1-c {
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+}
