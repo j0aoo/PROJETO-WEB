@@ -50,15 +50,18 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 18px;
-	font-family: 'arial', cursive;
+	font-size: 23px;
+	font-family: 'Lobster', cursive;
+	box-shadow: 1px 1px 12px #4F4F4F;
+	color: #1C1C1C;
 }
 
 .geral-info {
 	width: 100%;
-	min-height: 300px;
+	min-height: 730px;
 	display: flex;
 	justify-content: space-between;
+	margin-top: 40px;
 }
 
 @media (max-width: 576px) {
@@ -80,21 +83,149 @@ body {
 .ld-1 {
 	width: 100%;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-	background-color: red;
-}
-
-.img-info img {
-	max-height: 400px;
+	justify-content: center;
+	flex-direction: column;
 }
 
 .ld-2 {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	font-family: arial;
+}
+
+.img-car-p {
+	max-height: 400px;
+}
+
+.data, .km {
+	width: 40px;
+	height: 40px;
+	background-color: #00BFFF;
+	font-size: 15px;
+	color: #fff;
+	border-radius: 50%;
+	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: pink
+	font-weight: bold;
+	margin: 7px;
+}
+
+.span-1, .span-2 {
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.span-1 p {
+	font-size: 25px;
+}
+
+.span-2 p {
+	font-size: 25px;
+}
+
+.ld-2-preco {
+	font-size: 35px;
+	margin-left: 10px; 
+}
+
+.form-g-p {
+	margin-left: 10px;
+	font-size: 20px;
+	padding: 30px 0px;
+}
+
+#form-cont {
+	margin-left: 10px;
+}
+
+.form-jc {
+	width: 70%;
+	margin-bottom: 10px;
+	border-radius: 3px;
+	border: 1px solid #9C9C9C;
+	height: 27px;
+	padding: 3px;
+}
+
+#form-contact span {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#btn-sand {
+	height: 36px;
+	color: #fff;
+	font-size: 17px;
+	background-color: #00BFFF;
+	border: 1px solid #1C1C1C;
+	font-weight: bold;
+}
+
+.algo {
+	background-color: red;
+	width: 120px;
+
+}
+
+.span-algo {
+	width: 50%;
+	background-color: blue;
+	width: 100px;
+	margin-left: 4px;
+	padding-left: 20px;	
+}
+
+.coisas-extras {
+	max-width: 530px;
+}
+
+.final {
+	width: 100%;
+	min-height: 400px;
+	background-color: #F5F5F5;
+}
+
+.logo-wolk {
+	display: flex;
+	justify-content: center;
+	padding: 55px;
+}
+
+.info-extra {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.info-extra .pt-1-extra h1 {
+	padding: 10px;
+}
+
+.info-extra .pt-1-extra a {
+	padding: 3px;
+	color: #1C1C1C;
+}
+
+.pt-2-f h4 {
+	padding: 7px;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.p1-1-c {
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
 }
