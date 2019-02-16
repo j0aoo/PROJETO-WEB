@@ -1,0 +1,155 @@
+* {
+  padding: 0 auto;
+  margin: 0;
+}
+
+body {
+	font-family: 'Playfair Display', serif;
+}
+
+.nav-menu {
+	width: 100%;
+	height: 80px;
+	background-color: #FFF;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.logo h1 {
+	font-family: 'Lobster', cursive;
+	font-size: 25px;
+}
+
+.bx-menu {
+	width: 100%;
+	height: 40px;
+	background-color: #FFD700;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: no-wrap;
+	flex-direction: row;	
+}
+
+.ul-nav li {
+	display: inline;
+	padding: 60px;
+}
+
+.ul-nav li a {
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+}
+
+.header-contato {
+	background-image: url(http://www.acecamtech.com/wp-content/uploads/2016/10/header-contact-us.jpg);
+	min-height: 520px;
+	background-repeat: no-repeat;
+	width: 100%;
+	background-position: center center;
+	text-align: center;
+	background-attachment: relative;
+	position: relative;
+
+	-webkit-background-size:100%;
+	-moz-background-size:100%;
+	-o-background-size:100%;
+	background-size: 100%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.header-contact {
+	width: 100%;
+	height: 80px;
+	background-color: #F8F8FF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 23px;
+	font-family: 'Lobster', cursive;
+	box-shadow: 1px 1px 12px #4F4F4F;
+}
+
+.main {
+	width: 100%;
+	min-height: 300px;
+}
+
+.geral-contact-form {
+	width: 100%;
+	min-height: 300px;
+	display: flex;
+	justify-content: space-between;
+}
+
+@media (max-width: 576px) {
+    .geral-contact-form {
+   		display: flex;
+   		flex-wrap: wrap;
+		width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .geral-contact-form {
+   		display: flex;
+   		flex-wrap: wrap;
+		width: 100%;
+    }
+}
+
+.funcionamento {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.form {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.funcionamento h2 {
+	margin-top: 40px;
+	font-size: 24px;
+	font-family: 'Lobster', cursive;
+	padding: 40px;
+}
+
+.table-h {
+	width: 90%;
+  	margin-bottom: 1rem;
+ 	background-color: transparent;
+ 	background-color: #fff;
+}
+
+.table-h th,
+.table-h td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.table-h th,
+.table-h td {
+	border-bottom-width: 2px;
+}
+
+.form h2 {
+	margin-top: 40px;
+	font-size: 24px;
+	font-family: 'Lobster', cursive;
+	padding: 40px
+}
+
