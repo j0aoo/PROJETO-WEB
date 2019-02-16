@@ -136,14 +136,77 @@ body {
 	flex-direction: column;
 	align-items: center;
 	margin: 30px;
-	padding: 0px 40px;
+	padding: 0px 5px;
 }
 
 .item-facil img {
-	height: 150px;
+	height: 90px;
+	padding: 20px;
 }
 
 .item-facil p {
 	margin-top: 20px;
-	max-width: 220px;
+	max-width: 300px;
+}
+
+.final {
+	width: 100%;
+	min-height: 400px;
+	background-color: #F5F5F5;
+}
+
+.logo-wolk {
+	display: flex;
+	justify-content: center;
+	padding: 55px;
+}
+
+.info-extra {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.info-extra .pt-1-extra h1 {
+	padding: 10px;
+}
+
+.info-extra .pt-1-extra a {
+	padding: 3px;
+	color: #1C1C1C;
+}
+
+.pt-2-f h4 {
+	padding: 7px;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.p1-1-c {
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+}
+
+.fala-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px;
+}
+
+.fala-link a {
+	text-decoration: none;
+	padding: 22px 27px;
+	border-radius: 3px;
+	border: 1px solid #FFD700;
+	color: #FFD700;
+	font-size: 20px;
 }
