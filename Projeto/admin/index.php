@@ -48,6 +48,18 @@
 		<a href="">
 			<div class="link">
 				<ul>
+					<li><h4 class="li-p">Admin</h4>
+						<ul class="link-menu">
+							<li><a href="" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar</a></li>
+							<li><a href="" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Excluir</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</a>
+		<a href="">
+			<div class="link">
+				<ul>
 					<li><h4 class="li-p">Carros Novos</h4>
 						<ul class="link-menu">
 							<li><a href="" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Cadastrar</a></li>

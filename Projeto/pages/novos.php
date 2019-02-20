@@ -3,10 +3,9 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
-
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-	<link rel="stylesheet" type="text/css" href="css/styleContato.css">
+	<link rel="stylesheet" type="text/css" href="css/styleNovos.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<!-- apenas teste-->
@@ -19,108 +18,69 @@
 	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
-
 </head>
 <body>
 
-<nav class="nav-menu">
-	<div class="logo">
-		<h1>Auto Sports</h1>
-	</div>
-	<div class="lig">
-		<h4>LIGUE JÁ | (84) 94002-8922</h4>
-	</div>
-</nav>
-<div class="bx-menu">
-	<ul class="ul-nav">
-		<li>
-			<a href="">NOVOS |</a>
-		</li>
-		<li>
-			<a href="">SEMINOVOS |</a>
-		</li>
-		<li>
-			<a href="">PEÇAS |</a>
-		</li>
-		<li>
-			<a href="">CONSÓRCIO |</a>
-		</li>
-		<li>
-			<a href="">CONTATO |</a>
-		</li>
-	</ul>
-</div>
+<?php
+	include('menu.php');
+?>
 
 <section>
-	<div class="header-contato">
+	<div class="header">
 	
 	</div>
 </section>
 
 <section>
 	<div class="header-contact">
-		<h1>Fale Conosco</h1>
+		<h1>Catálogo de Carros Novos</h1>
 	</div>
 </section>
 
 <section>
-	<div class="main">
-		<div class="geral-contact-form">
-			
-			<div class="funcionamento">
-				<h2 class="txt-finc">Horario de Funcionamento</h2>
-				<table class="table-h">
-					<tr align="center">
-						<th>Departamento</th>
-						<th>Segunda a sexta</th>
-						<th>Sabado</th>
-					</tr>
-					<tr align="center">
-						<th>Veiculos Novos</th>
-						<td>07:30 às 18:30</td>
-						<td>08:00 às 13:00</td>
-					</tr>
-					<tr align="center">
-						<th>Veiculos Seminovos</th>
-						<td>08:00 às 18:00</td>
-						<td>08:00 às 13:00</td>
-					</tr>
-					<tr align="center">
-						<th>Assistência Técnica</th>
-						<td>07:30 às 17:30</td>
-						<td>08:00 às 12:00</td>
-					</tr>
-				</table>
-			</div>
-
-			<div class="form-h">
-
-				<div class="gd">
-					<h2 class="txt-finc"></h2>
-
-					<form id="form-contact">
-					
-					<span>Nome</span><br>
-					<input type="text" name="Nome" placeholder="Nome" required
-					 maxlength="100" class="form-jc"><br>
-
-					<span>Telefone</span><br>
-					<input type="text" name="Telefone" placeholder="Telefone" required
-					 maxlength="16" class="form-jc"><br>
-
-					<span>Email</span><br>
-					<input type="email" name="Email" placeholder="Email" required
-					 maxlength="100" class="form-jc"><br>
-
-					<span>Mensagem</span><br>
-					<textarea class="form-jc" required name="Mensagem" placeholder="Mensagem" maxlength="100"></textarea><br><br>
-
-					<input type="submit" value="Enviar" id="btn-sand" class="form-jc">
-
-				</form>	
-			</div>
-
-			</div>
+	<div class="carros-o">
+		<div class="txt-bx-header">
+			<h2>Novos em OFERTA</h2>
+		</div>
+		<div class="conjCar">
+			<a href="">
+				<div class="cars">
+					<img src="imgCar/car.jpg" class="imgCar">
+					<h3>Name</h3>
+				</div>
+			</a>
+			<a href="">
+				<div class="cars">
+					<img src="imgCar/car.jpg" class="imgCar">
+					<h3>Name</h3>
+				</div>
+			</a>
+			<a href="">
+				<div class="cars">
+					<img src="imgCar/car.jpg" class="imgCar">
+					<h3>Name</h3>
+				</div>
+			</a>
+		</div>
+		<div class="conjCar">
+			<a href="">
+				<div class="cars">
+					<img src="imgCar/car.jpg" class="imgCar">
+					<h3>Name</h3>
+				</div>
+			</a>
+			<a href="">
+				<div class="cars">
+					<img src="imgCar/car.jpg" class="imgCar">
+					<h3>Name</h3>
+				</div>
+			</a>
+			<a href="">
+				<div class="cars">
+					<img src="imgCar/car.jpg" class="imgCar">
+					<h3>Name</h3>
+				</div>
+			</a>
 		</div>
 	</div>
 </section>
@@ -188,7 +148,6 @@
 		</div>
 	</div>
 </section>
-
 
 </body>
 </html>

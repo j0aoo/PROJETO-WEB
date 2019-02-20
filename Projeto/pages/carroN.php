@@ -3,9 +3,10 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
+
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-	<link rel="stylesheet" type="text/css" href="css/styleNovos.css">
+	<link rel="stylesheet" type="text/css" href="css/styleN.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<!-- apenas teste-->
@@ -18,93 +19,99 @@
 	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
+
+	<script
+  	src="https://code.jquery.com/jquery-3.3.1.min.js"
+  	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  	crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+
+    <script
+  	src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  	integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  	crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$(function(){
+            $("#accordion").accordion();
+        });
+	</script>
+
 </head>
 <body>
 
-<nav class="nav-menu">
-	<div class="logo">
-		<h1>Auto Sports</h1>
-	</div>
-	<div class="lig">
-		<h4>LIGUE JÁ | (84) 94002-8922</h4>
-	</div>
-</nav>
-<div class="bx-menu">
-	<ul class="ul-nav">
-		<li>
-			<a href="">NOVOS |</a>
-		</li>
-		<li>
-			<a href="">SEMINOVOS |</a>
-		</li>
-		<li>
-			<a href="">PEÇAS |</a>
-		</li>
-		<li>
-			<a href="">CONSÓRCIO |</a>
-		</li>
-		<li>
-			<a href="">CONTATO |</a>
-		</li>
-	</ul>
-</div>
+<?php
+	include('menu.php');
+?>
 
 <section>
-	<div class="header">
-	
+	<div class="header-Name">
+		<h1>NameCar</h1>
 	</div>
 </section>
 
 <section>
-	<div class="header-contact">
-		<h1>Catálogo de Carros Novos</h1>
-	</div>
-</section>
+	<div class="geral-info">
+		<div class="ld-1">
+			<div class="img-info">
+				<img src="imgCar/carhb20.jpg" class="img-car-p"><br>
+				<div class="coisas-extras">
+					<div id="accordion">
+				        <h3>Marca</h3>
+				        <div>
+				            <p>Lorem ipsum dolor sit amet, consectetur sint.</p>
+				        </div>
+				        <h3>Versão</h3>
+				        <div>
+				            <p>Lorem ipsum dolor sit amet, consectetursint.</p>
+				        </div>
+				        <h3>Km</h3>
+				        <div>
+				            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				        </div>
+				        <h3>Ano</h3>
+				        <div>
+				            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				        </div>
+				        <h3>Cor</h3>
+				        <div>
+				            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+		<div class="ld-2">
+			<h2 class="ld-2-preco">R$ 100.000,00</h2>
+			<div class="span-1">
+				<span class="data"><center>ano</center></span>
+				<p>2019</p>
+			</div>
+			<div class="span-2">
+				<span class="km"><center>km</center></span>
+				<p>50.531</p>
+			</div>
 
-<section>
-	<div class="carros-o">
-		<div class="txt-bx-header">
-			<h2>Novos em OFERTA</h2>
+			<div class="form-contact">
+			<div class="form-geral">
+				<div class="form-g">
+					<p class="form-g-p">Não perca tempo, Faça seu orçamento!</p>
+					<form id="form-cont">
+						<span>Nome</span><br>
+						<input type="text" name="nome" placeholder="Nome" required class="form-jc"><br>
+
+						<span>Telefone</span><br>
+						<input type="text" name="tel" placeholder="Telefone" required class="form-jc"><br>
+
+						<span>Email</span><br>
+						<input type="email" name="email" placeholder="Email" required class="form-jc"><br><br>
+
+						<input type="submit" value="Solicitar contato" id="btn-sand" class="form-jc">
+					</form>
+				</div>
+			</div>
 		</div>
-		<div class="conjCar">
-			<a href="">
-				<div class="cars">
-					<img src="imgCar/car.jpg" class="imgCar">
-					<h3>Name</h3>
-				</div>
-			</a>
-			<a href="">
-				<div class="cars">
-					<img src="imgCar/car.jpg" class="imgCar">
-					<h3>Name</h3>
-				</div>
-			</a>
-			<a href="">
-				<div class="cars">
-					<img src="imgCar/car.jpg" class="imgCar">
-					<h3>Name</h3>
-				</div>
-			</a>
-		</div>
-		<div class="conjCar">
-			<a href="">
-				<div class="cars">
-					<img src="imgCar/car.jpg" class="imgCar">
-					<h3>Name</h3>
-				</div>
-			</a>
-			<a href="">
-				<div class="cars">
-					<img src="imgCar/car.jpg" class="imgCar">
-					<h3>Name</h3>
-				</div>
-			</a>
-			<a href="">
-				<div class="cars">
-					<img src="imgCar/car.jpg" class="imgCar">
-					<h3>Name</h3>
-				</div>
-			</a>
 		</div>
 	</div>
 </section>

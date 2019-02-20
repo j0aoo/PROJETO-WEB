@@ -22,33 +22,9 @@
 </head>
 <body>
 
-<nav class="nav-menu">
-	<div class="logo">
-		<h1>Auto Sports</h1>
-	</div>
-	<div class="lig">
-		<h4>LIGUE JÁ | (84) 94002-8922</h4>
-	</div>
-</nav>
-<div class="bx-menu">
-	<ul class="ul-nav">
-		<li>
-			<a href="">NOVOS |</a>
-		</li>
-		<li>
-			<a href="">SEMINOVOS |</a>
-		</li>
-		<li>
-			<a href="">PEÇAS |</a>
-		</li>
-		<li>
-			<a href="">CONSÓRCIO |</a>
-		</li>
-		<li>
-			<a href="">CONTATO |</a>
-		</li>
-	</ul>
-</div>
+<?php
+	include('menu.php');
+?>
 
 <section>
 	<div class="header">
