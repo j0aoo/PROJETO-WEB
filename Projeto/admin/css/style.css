@@ -1,0 +1,146 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Playfair Display', serif;
+}
+
+#check {
+	display: none;
+}
+
+#icone {
+	cursor: pointer;
+	padding: 15px;
+	position: absolute;
+	z-index: 1;
+}
+
+.barra {
+	background-color: #1c1c1c;
+	height: 100%;
+	width: 210px;
+	position: absolute;
+	transition: all 0.3s linear;
+}
+
+.nav-barra {
+	width: 100%;
+	position: absolute;
+	top: 60px;
+}
+
+.nav-barra a {
+	text-decoration: none;	
+}
+
+.link {
+	background-color: #494950;
+	padding: 20px;
+	font-family: arial;
+	font-size: 12px;
+	transition: all 0.2s linear;
+	color: #fff;
+	border-bottom: 2px solid #222;
+	font-size: 13px;
+}
+
+#check:checked ~ .barra {
+	transform: translate(-210px);
+}
+
+#check:checked ~ .barra nav a .link {
+	opacity: 1;
+	margin-top: 0;
+	transition-delay: 0.1s;
+}
+
+.menu-cima {
+	width: 100%;
+	height: 60px;
+	background-color: #1c1c1c;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;	
+}
+
+.geral-cima h2 {
+	color: #fff;
+	padding: 0px 30px;
+}
+
+.ld-2 {
+	display: flex;
+	flex-direction: row;
+	color: #fff;
+	padding: 0px 20px;
+	align-items: center;
+}
+
+.img-ad {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	border: 1px solid grey;
+	margin: 10px;
+}
+
+.ld-2 ul {
+	list-style: none;
+}
+
+.ld-2 ul .nav-drop {
+	position: absolute;
+	visibility: hidden;
+}
+
+.ld-2 ul:hover .nav-drop {
+	visibility: visible;
+	border: 1px solid #ddd;
+	padding: 10px 25px;
+	text-decoration: none;
+}
+
+.ld-2 ul:hover .nav-drop a {
+	text-decoration: none;
+	color: blue;
+	font-size: 18px;
+}
+
+.link ul {
+	list-style: none;
+}
+
+.li-p {
+	color: #fff;
+}
+
+.link ul .link-menu {
+	position: absolute;
+	visibility: hidden;
+}
+
+.link ul:hover .link-menu {
+	visibility: visible;
+	border: 1px solid #ddd;
+	padding: 10px 25px;
+	text-decoration: none;
+	background-color: #fff;
+	width: 112px;
+}
+
+.link ul:hover .link-menu a {
+	text-decoration: none;
+	color: #1c1c1c;
+	font-size: 14px;
+}
+
+.link ul .link-menu li:hover a {
+	font-size: 17px;
+}
+
+.link ul:hover .link-menu li {
+	padding: 3px;
+}
