@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 09-Fev-2019 às 19:51
--- Versão do servidor: 10.1.30-MariaDB
--- PHP Version: 7.2.2
+-- Generation Time: 21-Fev-2019 às 19:22
+-- Versão do servidor: 10.1.37-MariaDB
+-- versão do PHP: 7.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -32,6 +32,13 @@ CREATE TABLE `cademailnovidades` (
   `id` int(11) NOT NULL,
   `email` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `cademailnovidades`
+--
+
+INSERT INTO `cademailnovidades` (`id`, `email`) VALUES
+(1, 'panda@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -64,6 +71,27 @@ CREATE TABLE `categoria` (
   `id` int(11) NOT NULL,
   `nome` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `contato`
+--
+
+CREATE TABLE `contato` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `telefone` varchar(16) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `mensagem` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `contato`
+--
+
+INSERT INTO `contato` (`id`, `nome`, `telefone`, `email`, `mensagem`) VALUES
+(1, 'fsdfsd', '23123', 'charego@hotmail.com', 'hh');
 
 -- --------------------------------------------------------
 
@@ -104,6 +132,26 @@ CREATE TABLE `novidade` (
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `pecas`
+--
+
+CREATE TABLE `pecas` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `telefone` varchar(16) NOT NULL,
+  `email` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `pecas`
+--
+
+INSERT INTO `pecas` (`id`, `nome`, `telefone`, `email`) VALUES
+(1, 'panda', '7789', 'panda@gmail.com');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `proposta`
 --
 
@@ -140,6 +188,12 @@ ALTER TABLE `categoria`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `contato`
+--
+ALTER TABLE `contato`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `cor`
 --
 ALTER TABLE `cor`
@@ -158,6 +212,12 @@ ALTER TABLE `novidade`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `pecas`
+--
+ALTER TABLE `pecas`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `proposta`
 --
 ALTER TABLE `proposta`
@@ -171,7 +231,7 @@ ALTER TABLE `proposta`
 -- AUTO_INCREMENT for table `cademailnovidades`
 --
 ALTER TABLE `cademailnovidades`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `carros`
@@ -184,6 +244,12 @@ ALTER TABLE `carros`
 --
 ALTER TABLE `categoria`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `contato`
+--
+ALTER TABLE `contato`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `cor`
@@ -202,6 +268,12 @@ ALTER TABLE `financiamento`
 --
 ALTER TABLE `novidade`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `pecas`
+--
+ALTER TABLE `pecas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `proposta`

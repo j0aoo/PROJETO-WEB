@@ -1,6 +1,6 @@
 <?php 
 
-	class ContatoPecas {
+	class Contatopecas {
 
 		private $nome;
 		private $telefone;

@@ -1,26 +1,23 @@
 <?php
-
-	include_once("Contato.php");
+	include_once("Contatopecas.php");
 	include_once("Conexao.php");
 
-	class ContatoDAO {
+	class ContatopecasDAO {
 
-		public function InsereContato (Contato $contato) {
+		public function InsereContatoPecas (Contatopecas $contato) {
 		
 			$con = new Conexao();
 			$stmt = $con->Conexao();
 			
-			$sql = $stmt->prepare("INSERT INTO contato(nome,telefone,email,mensagem) VALUES (?,?,?,?);");
+			$sql = $stmt->prepare("INSERT INTO pecas(nome,telefone,email) VALUES (?,?,?);");
 			
 			$nome = $contato->getNome();
 			$telefone = $contato->getTelefone();
 			$email = $contato->getEmail();
-			$mensagem = $contato->getMensagem();
 		
 			$sql->bindParam(1, $nome);
 			$sql->bindParam(2, $telefone);
 			$sql->bindParam(3, $email);
-			$sql->bindParam(4, $mensagem);
 			
 			if ($sql->execute()) {
 				
@@ -35,5 +32,4 @@
 		}// fim insere
 		
 	}
-
 ?>

@@ -1,3 +1,38 @@
+<?php
+	
+	include_once("../admin/Contato.php");
+	include_once("../admin/ContatoDAO.php");
+	
+	$contato = new Contato();
+	$contatoDAO = new ContatoDAO();	 
+
+	if (isset($_POST['nome'])) {
+
+		$contato->setNome($_POST['nome']);
+		$contato->setTelefone($_POST['telefone']);
+		$contato->setEmail($_POST['email']);
+		$contato->setMensagem($_POST['mensagem']);
+
+		if ($contatoDAO->InsereContato($contato)) {
+			
+			$email = $_POST['email'];
+			$assunto = "Auto sports! contato solicitado";
+			$mensagem = "Olá! ".$_POST['nome'].", Seu pedido de contato foi realizado com sucesso!<br> Em que podemos ajuda-lo?";	
+		
+			$to = "dk.joao12@gmail.com";
+			$subject = "$assunto";
+			$message = "$mensagem";
+			$header = "MIME-Version: 1.0 \r\n";
+			$header .= "Content-type: text/html; charset=iso-8859-1\r\n";
+			$header .= "From $email";
+
+			mail($to, $subject, $message, $header);
+		
+		}
+
+	}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +54,10 @@
 	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
+
+	<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
+    
 
 </head>
 <body>
@@ -74,22 +113,22 @@
 				<div class="gd">
 					<h2 class="txt-finc">Fale com um consultor</h2>
 
-					<form id="form-contact">
+					<form id="form-contact" method="post">
 					
 					<span>Nome</span><br>
-					<input type="text" name="Nome" placeholder="Nome" required
+					<input type="text" name="nome" placeholder="Nome" required
 					 maxlength="100" class="form-jc"><br>
 
 					<span>Telefone</span><br>
-					<input type="text" name="Telefone" placeholder="Telefone" required
+					<input type="text" name="telefone" id="tele" placeholder="Telefone" required
 					 maxlength="16" class="form-jc"><br>
 
 					<span>Email</span><br>
-					<input type="email" name="Email" placeholder="Email" required
+					<input type="email" name="email" placeholder="Email" required
 					 maxlength="100" class="form-jc"><br>
 
 					<span>Mensagem</span><br>
-					<textarea class="form-jc" required name="Mensagem" placeholder="Mensagem" maxlength="100"></textarea><br><br>
+					<textarea class="form-jc" required name="mensagem" placeholder="Mensagem" maxlength="100"></textarea><br><br>
 
 					<input type="submit" value="Solicitar Contato" id="btn-sand" class="form-jc">
 
@@ -165,6 +204,17 @@
 	</div>
 </section>
 
+<script type="text/javascript">
 
+    $(document).ready(function () { 
+    
+        var $campoTelefone = $("#tele");
+    
+        $campoTelefone.mask('(99)9-9999-9999', {reverse: true});
+    
+    });
+
+        
+</script>
 </body>
 </html>

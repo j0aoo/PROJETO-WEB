@@ -1,3 +1,37 @@
+<?php
+	
+	include_once("../admin/Contatopecas.php");
+	include_once("../admin/ContatopecasDAO.php");
+	
+	$contatopecas = new Contatopecas();
+	$contatopecasDAO = new ContatopecasDAO();	 
+
+	if (isset($_POST['nome'])) {
+
+		$contatopecas->setNome($_POST['nome']);
+		$contatopecas->setTelefone($_POST['telefone']);
+		$contatopecas->setEmail($_POST['email']);
+
+		if ($contatopecasDAO->InsereContatoPecas($contatopecas)) {
+			
+			$email = $_POST['email'];
+			$assunto = "Auto sports! Contato para peças solicitado";
+			$mensagem = "Olá! ".$_POST['nome'].", Seu pedido de contato foi realizado com sucesso!<br> Em que podemos ajuda-lo?";	
+		
+			$to = "dk.joao12@gmail.com";
+			$subject = "$assunto";
+			$message = "$mensagem";
+			$header = "MIME-Version: 1.0 \r\n";
+			$header .= "Content-type: text/html; charset=iso-8859-1\r\n";
+			$header .= "From $email";
+
+			mail($to, $subject, $message, $header);
+		
+		}
+
+	}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -50,13 +84,13 @@
 			<div class="grd-form">
 				<div class="gd">
 					<h3>Fale com um consultor</h3>
-					<form id="form-pecas">
+					<form id="form-pecas" method="post">
 						
 						<span>Nome</span><br>
 						<input type="Text" name="nome" class="form-jc" placeholder="Nome" required><br>
 
 						<span>Telefone</span><br>
-						<input type="Text" name="tel" class="form-jc" placeholder="Telefone" required><br>
+						<input type="Text" name="telefone" class="form-jc" placeholder="Telefone" required><br>
 
 						<span>Email</span><br>
 						<input type="email" name="email" class="form-jc" placeholder="Email" required><br><br>
