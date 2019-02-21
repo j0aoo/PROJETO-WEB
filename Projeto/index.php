@@ -14,6 +14,16 @@
 			$emailForm = $_POST['emailCad'];
 			$assunto = "Cadastro concluido";
 			$mensagem = "Cadastro de Email realizado com sucesso! <br> Você recebera notifiações a cada nova atualização ";	
+		
+			$to = "dk.joao12@gmail.com";
+			$subject = "$assunto";
+			$message = "$mensagem";
+			$header = "MIME-Version: 1.0 \r\n";
+			$header .= "Content-type: text/html; charset=iso-8859-1\r\n";
+			$header .= "From $emailForm";
+
+			mail($to, $subject, $message, $header);
+		
 		}
 
 	}
