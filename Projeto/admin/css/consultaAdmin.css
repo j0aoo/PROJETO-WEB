@@ -1,0 +1,92 @@
+.geral-consulta {
+	display: flex;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.txt {
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+
+.dt-table {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.funcionamento {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.table-h {
+	width: 90%;
+  	margin-bottom: 1rem;
+ 	background-color: transparent;
+ 	background-color: #fff;
+}
+
+.table-h th,
+.table-h td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.table-h th,
+.table-h td {
+	border-bottom-width: 2px;
+}
+
+.a-trash {
+	text-decoration: none;
+}
+
+#a-square {
+	text-decoration: none;
+}
+
+.form-h {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.gd {
+	width: 90%;
+}
+
+.form-jc {
+	width: 90%;
+	margin-bottom: 10px;
+	border-radius: 3px;
+	border: 1px solid #9C9C9C;
+	height: 27px;
+}
+
+#form-contact span {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#btn-sand {
+	height: 36px;
+	color: #1C1C1C;
+	font-size: 17px;
+	background-color: skyblue;
+	border: 1px solid #1C1C1C;
+	font-weight: bold;
+}
+
+.txt {
+	display: flex;
+	justify-content: center;
+}

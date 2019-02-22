@@ -49,6 +49,38 @@
 			}
 	
 		}// fim insere
+
+		public function ListarAdmin() {
+		
+			$con = new Conexao();
+			$stmt = $con->Conexao();
+			
+			$sql = $stmt->prepare("SELECT * FROM admin");
+			$sql->execute();
+		
+			return $sql->fetchAll();
+		
+		}// fim Listar
+
+		public function DeletarAdmin($id) {
+			
+			$con = new Conexao();
+			$stmt = $con->Conexao();
+			
+			$sql = $stmt->prepare("DELETE FROM `admin` WHERE `id` = ?;");
+			$sql->bindParam(1, $id);
+
+			if ($sql->execute()) {
+				
+				echo "<script> alert('Deletado com sucesso!') </script>";
+							
+			} else {
+				
+				echo "<script> alert('Erro ao Deletar!') </script>";
+				
+			}
+			
+		}// fim Deletar
 		
 	}
 	

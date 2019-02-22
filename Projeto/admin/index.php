@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<!-- apenas teste-->
@@ -28,7 +28,7 @@
 	<div class="ld-2">
 		<ul>
 			<li>
-				<img src="icone.png" class="img-ad">
+				<img src="https://siderg.com.br/uploads/default.png" class="img-ad">
 				<ul class="nav-drop">
 					<li>
 						<a href=""><h4>Sair</h4></a>
@@ -50,8 +50,8 @@
 				<ul>
 					<li><h4 class="li-p">Admin</h4>
 						<ul class="link-menu">
-							<li><a href="" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar</a></li>
-							<li><a href="" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Excluir</a></li>
+							<li><a href="?page=consultaAdmin" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar</a></li>
+							<li><a href="?page=cadastroAdmin" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Cadastrar</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -89,15 +89,23 @@
 <div class="cont">
 	<?php
 		
-		echo '<a href="http://localhost/PROJETO-WEB/Projeto/admin/index.php/usuario/alterar">Alterar</a></td>';
+		// $URL = $_SERVER['REQUEST_URI'];
+		// $url = explode("/", $URL);
 
-		$URL = $_SERVER['REQUEST_URI'];
-		$url = explode("/", $URL);
+		// if ($url[5] == "page" && $url[6] == "consultaAdmin") {
+		
+		// 	echo "deu crt";		
+				
+		// }
 
-		echo $url[0];		
-	
+	if(isset($_GET['page'])){
+
+		include($_GET['page'].".php");
+
+	}
+			
 	?>
 </div>
 
 </body>
-</html>
+</html>	
