@@ -1,3 +1,12 @@
+<?php
+
+	include_once("../admin/Seminovos.php");
+	include_once("../admin/SeminovosDAO.php");
+	
+	$seminovos = new Seminovos();
+	$seminovosDAO = new SeminovosDAO();
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,98 +64,37 @@
 		</div>
 		<div class="item-cars-semi">
 			<div class="cars-semi">
-				<div class="cars">
-					<a href="">
-						<img src="imgCar/carhb20.jpg">
-						<h3>Name Car</h3>
-						<div class="span-1">
-							<span class="data"><center>ano</center></span>
-							<p>2019</p>
-						</div>
-						<div class="span-2">
-							<span class="km"><center>km</center></span>
-							<p>50.531</p>
-						</div>
-						<p class="pre">Por R$ 100.000</p>
-					</a>
-				</div>
-				<div class="cars">
-					<a href="">
-						<img src="imgCar/carhb20.jpg">
-						<h3>Name Car</h3>
-						<div class="span-1">
-							<span class="data"><center>ano</center></span>
-							<p>2019</p>
-						</div>
-						<div class="span-2">
-							<span class="km"><center>km</center></span>
-							<p>50.531</p>
-						</div>
-						<p class="pre">Por R$ 100.000</p>
-					</a>
-				</div>
-				<div class="cars">
-					<a href="">
-						<img src="imgCar/carhb20.jpg">
-						<h3>Name Car</h3>
-						<div class="span-1">
-							<span class="data"><center>ano</center></span>
-							<p>2019</p>
-						</div>
-						<div class="span-2">
-							<span class="km"><center>km</center></span>
-							<p>50.531</p>
-						</div>
-						<p class="pre">Por R$ 100.000</p>
-					</a>
-				</div>
-			</div>
-			<div class="cars-semi">
-				<div class="cars">
-					<a href="">
-						<img src="imgCar/carhb20.jpg">
-						<h3>Name Car</h3>
-						<div class="span-1">
-							<span class="data"><center>ano</center></span>
-							<p>2019</p>
-						</div>
-						<div class="span-2">
-							<span class="km"><center>km</center></span>
-							<p>50.531</p>
-						</div>
-						<p class="pre">Por R$ 100.000</p>
-					</a>
-				</div>
-				<div class="cars">
-					<a href="">
-						<img src="imgCar/carhb20.jpg">
-						<h3>Name Car</h3>
-						<div class="span-1">
-							<span class="data"><center>ano</center></span>
-							<p>2019</p>
-						</div>
-						<div class="span-2">
-							<span class="km"><center>km</center></span>
-							<p>50.531</p>
-						</div>
-						<p class="pre">Por R$ 100.000</p>
-					</a>
-				</div>
-				<div class="cars">
-					<a href="">
-						<img src="imgCar/carhb20.jpg">
-						<h3>Name Car</h3>
-						<div class="span-1">
-							<span class="data"><center>ano</center></span>
-							<p>2019</p>
-						</div>
-						<div class="span-2">
-							<span class="km"><center>km</center></span>
-							<p>50.531</p>
-						</div>
-						<p class="pre">Por R$ 100.000</p>
-					</a>
-				</div>
+				
+				<?php
+
+					$teste = $seminovosDAO->ListarCarros();
+								
+					for ($i=0; $i < count($teste); $i++) {
+					
+						echo '
+
+							<div class="cars">
+								<a href="carroN.php?id='.$teste[$i]['id'].'">
+									<img src="../admin/carSemi/'.$teste[$i]['nomeImage'].'">
+									<h3>'.$teste[$i]['nome'].'</h3>
+									<div class="span-1">
+										<span class="data"><center>ano</center></span>
+										<p>'.$teste[$i]['ano'].'</p>
+									</div>
+									<div class="span-2">
+										<span class="km"><center>km</center></span>
+										<p>'.$teste[$i]['km'].'</p>
+									</div>
+									<p class="pre">Por R$ '.$teste[$i]['preco'].',00</p>
+								</a>
+							</div>
+
+						';
+					
+					}
+
+				?>
+				
 			</div>
 				
 		</div>

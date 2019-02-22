@@ -3,9 +3,15 @@
 	include_once("../admin/Orcamento.php");
 	include_once("../admin/OrcamentoDAO.php");
 	
+	include_once("../admin/Seminovos.php");
+	include_once("../admin/SeminovosDAO.php");
+
 	$orcamento = new Orcamento();
 	$orcamentoDAO = new OrcamentoDAO();
 	
+	$seminovos = new Seminovos();
+	$seminovosDAO = new SeminovosDAO();
+
 	if (isset($_POST['nome'])) {
 	
 		$orcamento->setNome($_POST['nome']);
@@ -64,9 +70,17 @@
 	include('menu.php');
 ?>
 
+<?php
+
+	$teste = $seminovosDAO->ListaUnica($_GET['id']);
+				
+	for ($i=0; $i < count($teste); $i++) {
+
+?>
+
 <section>
 	<div class="header-Name">
-		<h1>NameCar</h1>
+		<h1><?php echo $teste[$i]['nome']; ?></h1>
 	</div>
 </section>
 
@@ -79,37 +93,37 @@
 					<div id="accordion">
 				        <h3>Marca</h3>
 				        <div>
-				            <p>Lorem ipsum dolor sit amet, consectetur sint.</p>
+				            <p><?php echo $teste[$i]['marca']; ?></p>
 				        </div>
 				        <h3>Versão</h3>
 				        <div>
-				            <p>Lorem ipsum dolor sit amet, consectetursint.</p>
+				            <p><?php echo $teste[$i]['versao']; ?></p>
 				        </div>
 				        <h3>Km</h3>
 				        <div>
-				            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				            <p><?php echo $teste[$i]['km']; ?></p>
 				        </div>
 				        <h3>Ano</h3>
 				        <div>
-				            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				            <p><?php echo $teste[$i]['ano']; ?></p>
 				        </div>
 				        <h3>Cor</h3>
 				        <div>
-				            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				            <p><?php echo $teste[$i]['cor']; ?></p>
 				        </div>
 				    </div>
 				</div>
 			</div>
 		</div>
 		<div class="ld-2">
-			<h2 class="ld-2-preco">R$ 100.000,00</h2>
+			<h2 class="ld-2-preco">R$ <?php echo $teste[$i]['preco']; ?>,00</h2>
 			<div class="span-1">
 				<span class="data"><center>ano</center></span>
-				<p>2019</p>
+				<p><?php echo $teste[$i]['ano']; ?></p>
 			</div>
 			<div class="span-2">
 				<span class="km"><center>km</center></span>
-				<p>50.531</p>
+				<p><?php echo $teste[$i]['km']; ?></p>
 			</div>
 
 			<div class="form-contact">
@@ -134,6 +148,8 @@
 		</div>
 	</div>
 </section>
+
+<?php } ?>
 
 <section>
 	<div class="final">
