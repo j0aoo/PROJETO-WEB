@@ -127,7 +127,7 @@
 					<input type="email" name="email" placeholder="Email" required
 					 maxlength="100" class="form-jc"><br>
 
-					<span>Mensagem</span><br>
+					<span>Assunto</span><br>
 					<textarea class="form-jc" required name="mensagem" placeholder="Mensagem" maxlength="100"></textarea><br><br>
 
 					<input type="submit" value="Solicitar Contato" id="btn-sand" class="form-jc">

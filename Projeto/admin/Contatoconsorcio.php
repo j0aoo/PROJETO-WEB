@@ -1,7 +1,7 @@
-<?php 
-
-	class Contatopecas {
-
+<?php
+	
+	class Contatoconsorcio {
+	
 		private $nome;
 		private $telefone;
 		private $email;
@@ -20,6 +20,7 @@
 			return $this;
 		
 		}
+
 		public function getTelefone() {
 		
 			return $this->telefone;
@@ -47,7 +48,7 @@
 			return $this;
 		
 		}
-
+	
 		public function getStat() {
 		
 			return $this->stat;
@@ -62,6 +63,7 @@
 		
 		}
 
+		
 	}
 
 ?>

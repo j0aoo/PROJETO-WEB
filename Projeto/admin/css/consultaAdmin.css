@@ -1,9 +1,44 @@
-.geral-consulta {
+.form-busca {
+	padding-bottom: 30px;
+	padding-left: 5%;
 	display: flex;
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.form-b {
+	padding: 4px;
+	border-radius: 3px;
+	border: 1px solid black;	
+}
+
+.table-hover-Nlida {
+  color: black;
+  background-color: #FF6A6A;
+}
+
+.table-hover-lida {
+  color: black;
+  background-color: #90EE90;
+}
+
+.form-s {
+	padding: 4px 10px;
+	border-radius: 3px;
+	border: 1px solid black;
+	background-color: #1E90FF;
+	font-weight: bold;
+	font-size: 16px;
+	color: #fff;
+}
+
+.form-sa {
+	padding: 4px 10px;
+	border-radius: 3px;
+	border: 1px solid black;
+	margin-left: 50%;
+	background-color: #FFD700;
+	font-weight: bold;
+	font-size: 16px;
 }
 
 .txt {
@@ -67,7 +102,6 @@
 .form-jc {
 	width: 90%;
 	margin-bottom: 10px;
-	border-radius: 3px;
 	border: 1px solid #9C9C9C;
 	height: 27px;
 }

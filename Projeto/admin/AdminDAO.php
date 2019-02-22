@@ -40,11 +40,19 @@
 
 			if ($sql->execute()) {
 				
-				echo "<script> alert('Cadastrado com sucesso!') </script>";
+				echo "
+					<script> alert('Cadastrado com sucesso!');
+				 		location.href='http://localhost/PROJETO-WEB/Projeto/admin/?page=cadastroAdmin';
+				 	</script>
+				 ";
 
 			} else {
 				
-				echo "<script> alert('Erro ao cadastrar!') </script>";
+				echo "
+					<script> alert('Erro ao cadastrar');
+				 		location.href='http://localhost/PROJETO-WEB/Projeto/admin/?page=cadastroAdmin';
+				 	</script>
+				 ";
 				
 			}
 	
@@ -72,11 +80,19 @@
 
 			if ($sql->execute()) {
 				
-				echo "<script> alert('Deletado com sucesso!') </script>";
+				echo "
+					<script> alert('Deletado com sucesso!');
+				 		location.href='http://localhost/PROJETO-WEB/Projeto/admin/?page=consultaAdmin';
+				 	</script>
+				 ";
 							
 			} else {
 				
-				echo "<script> alert('Erro ao Deletar!') </script>";
+				echo "
+					<script> alert('Erro ao deletar!');
+				 		location.href='http://localhost/PROJETO-WEB/Projeto/admin/?page=consultaAdmin';
+				 	</script>
+				 ";
 				
 			}
 			

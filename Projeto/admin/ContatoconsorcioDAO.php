@@ -1,15 +1,16 @@
 <?php
-	include_once("Contatopecas.php");
+	
+	include_once("Contatoconsorcio.php");
 	include_once("Conexao.php");
 
-	class ContatopecasDAO {
+	class ContatoconsorcioDAO {
 
-		public function InsereContatoPecas (Contatopecas $contato) {
+		public function InsereContato (Contatoconsorcio $contato) {
 		
 			$con = new Conexao();
 			$stmt = $con->Conexao();
 			
-			$sql = $stmt->prepare("INSERT INTO pecas(nome,telefone,email) VALUES (?,?,?);");
+			$sql = $stmt->prepare("INSERT INTO contatoConsorcio(nome,telefone,email) VALUES (?,?,?);");
 			
 			$nome = $contato->getNome();
 			$telefone = $contato->getTelefone();
@@ -21,7 +22,7 @@
 			
 			if ($sql->execute()) {
 				
-				echo "<script> alert('Contato solicitado! Verifique seu email em instantes') </script>";
+				echo "<script> alert('Contato solicitado! verifique seu email em instantes') </script>";
 
 			} else {
 				
@@ -30,13 +31,13 @@
 			}
 	
 		}// fim insere
-		
-		public function ListarContatos() {
+
+		public function ListarConsorcio() {
 		
 			$con = new Conexao();
 			$stmt = $con->Conexao();
 			
-			$sql = $stmt->prepare("SELECT * FROM `pecas`");
+			$sql = $stmt->prepare("SELECT * FROM `contatoconsorcio`");
 			$sql->execute();
 		
 			return $sql->fetchAll();
@@ -48,7 +49,7 @@
 			$con = new Conexao();
 			$stmt = $con->Conexao();
 			
-			$sql = $stmt->prepare("SELECT * FROM `pecas` WHERE `nome` = ?");
+			$sql = $stmt->prepare("SELECT * FROM `contatoconsorcio` WHERE `nome` = ?");
 			$sql->bindParam(1, $nome);
 
 			$sql->execute();
@@ -57,21 +58,18 @@
 		
 		}// fim Listar
 
-		public function DeletarPecas($id) {
+		public function DeletarConsorcio($id) {
 			
 			$con = new Conexao();
 			$stmt = $con->Conexao();
 			
-			$sql = $stmt->prepare("DELETE FROM `pecas` WHERE `id` = ?;");
+			$sql = $stmt->prepare("DELETE FROM `contatoconsorcio` WHERE `id` = ?;");
 			$sql->bindParam(1, $id);
 
 			if ($sql->execute()) {
-
-				echo "
-					<script> alert('Deletado com sucesso!');
-				 		location.href='http://localhost/PROJETO-WEB/Projeto/admin/?page=PedidoPecas';
-				 	</script>
-				 ";
+				
+				echo "<script> alert('Deletado com sucesso!') </script>";
+				header("http://localhost/PROJETO-WEB/Projeto/admin/?page=PedidoConsorcio");
 			
 			} else {
 				
@@ -79,14 +77,14 @@
 				
 			}
 			
-		}// fim Deletar
-
+		}// fim Deletar		
+	
 		public function AtualizaStatus($id) {
 			
 			$con = new Conexao();
 			$stmt = $con->Conexao();
 			
-			$sql = $stmt->prepare("UPDATE `pecas` SET `stat` = 'lida' WHERE `id` = ?");
+			$sql = $stmt->prepare("UPDATE `contatoconsorcio` SET `stat` = 'lida' WHERE `id` = ?");
 		
 			$sql->bindParam(1, $id);
 			
@@ -95,7 +93,7 @@
 				echo "
 					<script>
 						alert('Contato marcado como visto!');
-						location.href='http://localhost/PROJETO-WEB/Projeto/admin/?page=PedidoPecas';
+						location.href='http://localhost/PROJETO-WEB/Projeto/admin/?page=PedidoConsorcio';
 				 	</script>
 				";
 			
@@ -104,7 +102,7 @@
 				echo "
 					<script>
 						alert('Erro ao alterar status!');
-						location.href='http://localhost/PROJETO-WEB/Projeto/admin/?page=PedidoPecas';
+						location.href='http://localhost/PROJETO-WEB/Projeto/admin/?page=PedidoConsorcio';
 				 	</script>
 				";
 
@@ -114,4 +112,6 @@
 		}
 
 	}
+	
+
 ?>

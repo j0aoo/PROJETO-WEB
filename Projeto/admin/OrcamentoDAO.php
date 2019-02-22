@@ -1,26 +1,24 @@
 <?php
 
-	include_once("Contato.php");
+	include_once("Orcamento.php");
 	include_once("Conexao.php");
 
-	class ContatoDAO {
+	class OrcamentoDAO {
 
-		public function InsereContato (Contato $contato) {
+		public function InsereOrcamento (Orcamento $orcamento) {
 		
 			$con = new Conexao();
 			$stmt = $con->Conexao();
 			
-			$sql = $stmt->prepare("INSERT INTO contato(nome,telefone,email,mensagem) VALUES (?,?,?,?);");
+			$sql = $stmt->prepare("INSERT INTO orcamento(nome,telefone,email) VALUES (?,?,?);");
 			
-			$nome = $contato->getNome();
-			$telefone = $contato->getTelefone();
-			$email = $contato->getEmail();
-			$mensagem = $contato->getMensagem();
+			$nome = $orcamento->getNome();
+			$telefone = $orcamento->getTelefone();
+			$email = $orcamento->getEmail();
 		
 			$sql->bindParam(1, $nome);
 			$sql->bindParam(2, $telefone);
 			$sql->bindParam(3, $email);
-			$sql->bindParam(4, $mensagem);
 			
 			if ($sql->execute()) {
 				
@@ -40,12 +38,12 @@
 	
 		}// fim insere
 
-		public function ListarContato() {
+		public function ListarOrcamento() {
 		
 			$con = new Conexao();
 			$stmt = $con->Conexao();
 			
-			$sql = $stmt->prepare("SELECT * FROM `contato`");
+			$sql = $stmt->prepare("SELECT * FROM `orcamento`");
 			$sql->execute();
 		
 			return $sql->fetchAll();
@@ -57,7 +55,7 @@
 			$con = new Conexao();
 			$stmt = $con->Conexao();
 			
-			$sql = $stmt->prepare("SELECT * FROM `contato` WHERE `nome` = ?");
+			$sql = $stmt->prepare("SELECT * FROM `orcamento` WHERE `nome` = ?");
 			$sql->bindParam(1, $nome);
 
 			$sql->execute();
@@ -66,25 +64,29 @@
 		
 		}// fim Listar
 
-		public function DeletarContato($id) {
+		public function DeletarOrcamento($id) {
 			
 			$con = new Conexao();
 			$stmt = $con->Conexao();
 			
-			$sql = $stmt->prepare("DELETE FROM `contato` WHERE `id` = ?;");
+			$sql = $stmt->prepare("DELETE FROM `orcamento` WHERE `id` = ?;");
 			$sql->bindParam(1, $id);
 
 			if ($sql->execute()) {
 				
 				echo "
 					<script> alert('Deletado com sucesso!');
-				 		location.href='http://localhost/PROJETO-WEB/Projeto/admin/?page=ControleContato';
+				 		location.href='http://localhost/PROJETO-WEB/Projeto/admin/?page=PedidoOrcamento';
 				 	</script>
 				 ";
 			
 			} else {
 				
-				echo "<script> alert('Erro ao Deletar!') </script>";
+				echo "
+					<script> alert('Erro ao deletar!');
+				 		location.href='http://localhost/PROJETO-WEB/Projeto/admin/?page=PedidoOrcamento';
+				 	</script>
+				 ";
 				
 			}
 			
@@ -95,7 +97,7 @@
 			$con = new Conexao();
 			$stmt = $con->Conexao();
 			
-			$sql = $stmt->prepare("UPDATE `contato` SET `stat` = 'lida' WHERE `id` = ?");
+			$sql = $stmt->prepare("UPDATE `orcamento` SET `stat` = 'lida' WHERE `id` = ?");
 		
 			$sql->bindParam(1, $id);
 			
@@ -104,13 +106,18 @@
 				echo "
 					<script>
 						alert('Contato marcado como visto!');
-						location.href='http://localhost/PROJETO-WEB/Projeto/admin/?page=ControleContato';
+						location.href='http://localhost/PROJETO-WEB/Projeto/admin/?page=PedidoOrcamento';
 				 	</script>
 				";
 			
 			} else {
 				
-				echo "<script> alert('Erro ao alterar status!') </script>";
+				echo "
+					<script>
+						alert('Erro ao atualizar status!');
+						location.href='http://localhost/PROJETO-WEB/Projeto/admin/?page=PedidoOrcamento';
+				 	</script>
+				";
 				
 			}
 			

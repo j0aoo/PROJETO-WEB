@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-	class Contatopecas {
+	class Orcamento {
 
 		private $nome;
 		private $telefone;
@@ -20,6 +20,7 @@
 			return $this;
 		
 		}
+		
 		public function getTelefone() {
 		
 			return $this->telefone;
@@ -48,6 +49,7 @@
 		
 		}
 
+
 		public function getStat() {
 		
 			return $this->stat;
@@ -62,6 +64,8 @@
 		
 		}
 
-	}
+	}	
+
+
 
 ?>

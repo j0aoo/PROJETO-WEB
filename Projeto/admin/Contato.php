@@ -6,6 +6,7 @@
 		private $telefone;
 		private $email;
 		private $mensagem;
+		private $stat;
 		
 		public function getNome() {
 		
@@ -58,6 +59,20 @@
 		public function setMensagem($mensagem) {
 		
 			$this->mensagem = $mensagem;
+			
+			return $this;
+		
+		}
+
+		public function getStat() {
+		
+			return $this->stat;
+		
+		}
+		
+		public function setStat($stat) {
+		
+			$this->stat = $stat;
 			
 			return $this;
 		

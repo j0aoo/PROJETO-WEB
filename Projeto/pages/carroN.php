@@ -1,3 +1,22 @@
+<?php
+
+	include_once("../admin/Orcamento.php");
+	include_once("../admin/OrcamentoDAO.php");
+	
+	$orcamento = new Orcamento();
+	$orcamentoDAO = new OrcamentoDAO();
+	
+	if (isset($_POST['nome'])) {
+	
+		$orcamento->setNome($_POST['nome']);
+		$orcamento->setTelefone($_POST['tel']);
+		$orcamento->setEmail($_POST['email']);
+
+		$orcamentoDAO->InsereOrcamento($orcamento);
+	
+	}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -97,7 +116,7 @@
 			<div class="form-geral">
 				<div class="form-g">
 					<p class="form-g-p">Não perca tempo, Faça seu orçamento!</p>
-					<form id="form-cont">
+					<form id="form-cont" method="post">
 						<span>Nome</span><br>
 						<input type="text" name="nome" placeholder="Nome" required class="form-jc"><br>
 

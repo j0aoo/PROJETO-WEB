@@ -1,3 +1,22 @@
+<?php
+	
+	include_once("../admin/Contatoconsorcio.php");
+	include_once("../admin/ContatoconsorcioDAO.php");
+	
+	$contato = new Contatoconsorcio();
+	$contatoDAO = new ContatoconsorcioDAO();
+	
+	if (isset($_POST['nome'])) {
+
+		$contato->setNome($_POST['nome']);
+		$contato->setTelefone($_POST['tel']);
+		$contato->setEmail($_POST['email']);
+		
+		$contatoDAO->InsereContato($contato);
+	
+	}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +26,7 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
 	<link rel="stylesheet" type="text/css" href="css/styleConsorcio.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstraps.css">
 	
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<!-- apenas teste-->
@@ -59,7 +79,7 @@
 			</div>
 		</div>
 		<div class="fala-link">
-			<a href="">Fça ja seu orçamento</a>
+			<a href="#" data-toggle="modal" data-target="#exampleModal">Faça ja seu orçamento</a>
 		</div>
 	</div>
 </section>
@@ -93,7 +113,7 @@
 			</div>
 		</div>
 		<div class="fala-link">
-			<a href="">Fale com um consultor</a>
+			<a href="#" data-toggle="modal" data-target="#exampleModal">Fale com um consultor</a>
 		</div>
 	</div>
 </section>
@@ -162,28 +182,39 @@
 	</div>
 </section>
 
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Fale com um consultor!</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <div class="gd">
+			<form id="form-contact" method="post">
+				
+				<span>Nome</span><br>
+				<input type="text" name="nome" placeholder="Nome" required
+				 maxlength="100" class="form-jc"><br>
+
+				<span>Telefone</span><br>
+				<input type="text" name="tel" id="tele" placeholder="Telefone" required
+				 maxlength="16" class="form-jc"><br>
+
+				<span>Email</span><br>
+				<input type="email" name="email" placeholder="Email" required
+				 maxlength="100" class="form-jc"><br>
+
+			
+		</div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <input type="submit" class="btn btn-primary" value="Solicitar contato">
+        </form>	
       </div>
     </div>
   </div>

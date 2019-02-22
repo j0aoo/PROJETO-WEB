@@ -174,3 +174,28 @@ body {
   color: #FFD700;
   font-size: 20px;
 }
+
+.gd {
+  width: 90%;
+}
+
+.form-jc {
+  width: 90%;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: 1px solid #9C9C9C;
+  height: 27px;
+}
+
+#form-contact span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#btn-sand {
+  height: 36px;
+  color: #1C1C1C;
+  font-size: 17px;
+  background-color: #FFD700;
+  border: 1px solid #1C1C1C;
+}

@@ -60,6 +60,18 @@
 		<a href="">
 			<div class="link">
 				<ul>
+					<li><h4 class="li-p">Cores (Para carros)</h4>
+						<ul class="link-menu">
+							<li><a href="?page=CadstroCor" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Cadastrar</a></li>
+							<li><a href="?page=ConsultaCor" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</a>
+		<a href="">
+			<div class="link">
+				<ul>
 					<li><h4 class="li-p">Carros Novos</h4>
 						<ul class="link-menu">
 							<li><a href="" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Cadastrar</a></li>
@@ -83,26 +95,61 @@
 				</ul>
 			</div>
 		</a>
+		<a href="">
+			<div class="link">
+				<ul>
+					<li><h4 class="li-p">Contato geral</h4>
+						<ul class="link-menu">
+							<li><a href="?page=ControleContato" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</a>
+		<a href="">
+			<div class="link">
+				<ul>
+					<li><h4 class="li-p">Pedido de contato - ORÇAMENTO PARA CARRO</h4>
+						<ul class="link-menu">
+							<li><a href="?page=PedidoOrcamento" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</a>
+		<a href="">
+			<div class="link">
+				<ul>
+					<li><h4 class="li-p">Pedido de contato - PEÇAS</h4>
+						<ul class="link-menu">
+							<li><a href="?page=PedidoPecas" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</a>
+		<a href="">
+			<div class="link">
+				<ul>
+					<li><h4 class="li-p">Pedido de contato - CONSÓRCIO</h4>
+						<ul class="link-menu">
+							<li><a href="?page=PedidoConsorcio" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</a>
 	</nav>
 </div>
 
 <div class="cont">
 	<?php
 		
-		// $URL = $_SERVER['REQUEST_URI'];
-		// $url = explode("/", $URL);
+		if(isset($_GET['page'])){
 
-		// if ($url[5] == "page" && $url[6] == "consultaAdmin") {
-		
-		// 	echo "deu crt";		
-				
-		// }
+			include($_GET['page'].".php");
 
-	if(isset($_GET['page'])){
-
-		include($_GET['page'].".php");
-
-	}
+		}
 			
 	?>
 </div>
