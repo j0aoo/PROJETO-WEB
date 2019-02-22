@@ -53,6 +53,10 @@
 	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
+
+	<script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
+
 </head>
 <body>
 
@@ -90,7 +94,7 @@
 						<input type="Text" name="nome" class="form-jc" placeholder="Nome" required><br>
 
 						<span>Telefone</span><br>
-						<input type="Text" name="telefone" class="form-jc" placeholder="Telefone" required><br>
+						<input type="Text" name="telefone" class="form-jc" placeholder="Telefone" id="tele" required><br>
 
 						<span>Email</span><br>
 						<input type="email" name="email" class="form-jc" placeholder="Email" required><br><br>
@@ -168,5 +172,17 @@
 	</div>
 </section>
 
+<script type="text/javascript">
+
+    $(document).ready(function () { 
+    
+        var $campoTelefone = $("#tele");
+    
+        $campoTelefone.mask('(99)9-9999-9999', {reverse: true});
+    
+    });
+
+        
+</script>
 </body>
 </html>

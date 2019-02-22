@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,18 +13,20 @@
 
 <div class="content">
 	<div class="geral-content">
-		<div class="form-gp">
-			<span>Login</span><br>
-			<input type="text" name="login" placeholder="Login" required class="form-jc"><br>	
-		</div>
-				
-		<div class="form-gp">
-			<span>Senha</span><br>
-			<input type="password" name="senha" placeholder="Senha" required class="form-jc"><br><br>
-		</div>	
+		<form method="post">
+			<div class="form-gp">
+				<span>Login</span><br>
+				<input type="text" name="login" placeholder="Login" required class="form-jc"><br>	
+			</div>
+					
+			<div class="form-gp">
+				<span>Senha</span><br>
+				<input type="password" name="senha" placeholder="Senha" required class="form-jc"><br><br>
+			</div>	
 
-		<input type="submit" value="enviar" class="form-jc">
-	</div>
+			<input type="submit" value="enviar" class="form-jc">
+		</div>
+		</form>
 </div>
 
 </body>

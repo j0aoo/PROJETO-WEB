@@ -21,7 +21,7 @@ body {
 .barra {
 	background-color: #1c1c1c;
 	height: 100%;
-	width: 210px;
+	width: 190px;
 	position: absolute;
 	transition: all 0.3s linear;
 }
@@ -143,4 +143,9 @@ body {
 
 .link ul:hover .link-menu li {
 	padding: 3px;
+}
+
+.cont {
+	padding-left: 240px;
+	padding-top: 40px; 	
 }

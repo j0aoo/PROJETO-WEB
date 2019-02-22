@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<!-- apenas teste-->
@@ -86,6 +86,18 @@
 	</nav>
 </div>
 
+<div class="cont">
+	<?php
+		
+		echo '<a href="http://localhost/PROJETO-WEB/Projeto/admin/index.php/usuario/alterar">Alterar</a></td>';
+
+		$URL = $_SERVER['REQUEST_URI'];
+		$url = explode("/", $URL);
+
+		echo $url[0];		
+	
+	?>
+</div>
 
 </body>
 </html>
