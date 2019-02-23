@@ -2,7 +2,7 @@
 
 	include_once("../admin/Novos.php");
 	include_once("../admin/NovosDAO.php");
-	
+
 	$novos = new Novos();
 	$novosDAO = new NovosDAO();
 
@@ -12,9 +12,10 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
+
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-	<link rel="stylesheet" type="text/css" href="css/styleNovos.css">
+	<link rel="stylesheet" type="text/css" href="css/styleCarN.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<!-- apenas teste-->
@@ -27,6 +28,25 @@
 	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
+
+	<script
+  	src="https://code.jquery.com/jquery-3.3.1.min.js"
+  	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  	crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+
+    <script
+  	src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  	integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  	crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		$(function(){
+            $("#accordion").accordion();
+        });
+	</script>
+
 </head>
 <body>
 
@@ -34,48 +54,84 @@
 	include('menu.php');
 ?>
 
+<?php
+
+	$teste = $novosDAO->ListaUnica($_GET['id']);
+				
+	for ($i=0; $i < count($teste); $i++) {
+
+?>
+
 <section>
-	<div class="header">
-	
+	<div class="header-name">
+		<h1><?php echo $teste[$i]['nome']; ?></h1>
 	</div>
 </section>
 
 <section>
-	<div class="header-contact">
-		<h1>Catálogo de Carros Novos</h1>
-	</div>
-</section>
-
-<section>
-	<div class="carros-o">
-		<div class="txt-bx-header">
-			<h2>Novos em OFERTA</h2>
+	<div class="geral-info">
+		<div class="ld-1">
+			<div class="img-info">
+				<img src="../admin/carNovos/<?php echo $teste[$i]['nomeImage']; ?>" class="img-car-p"><br>
+			</div>
 		</div>
-		<div class="conjCar">
-			<?php
+		<div class="ld-2">
+			<h2 class="ld-2-preco">R$ <?php echo $teste[$i]['preco']; ?>,00</h2>
+			<div class="span-1">
+				<span class="data"><center>ano</center></span>
+				<p><?php echo $teste[$i]['ano']; ?></p>
+			</div>
+			<div class="span-2">
+				<span class="km"><center>km</center></span>
+				<p>0</p>
+			</div><br>
 
-				$teste = $novosDAO->ListarCarros();
-							
-				for ($i=0; $i < count($teste); $i++) {
-
-					echo '
-
-						<a href="carroNovo.php?id='.$teste[$i]['id'].'">
-							<div class="cars">
-								<img src="../admin/carNovos/'.$teste[$i]['nomeImage'].'" class="imgCar">
-								<h3>'.$teste[$i]['nome'].'</h3>
-							</div>
-						</a>
-
-					';
-
-				}
-
-			?>
-			
+			<div class="coisas-extras">
+					<div id="accordion">
+				        <h3>Marca</h3>
+				        <div>
+				            <p><?php echo $teste[$i]['marca']; ?></p>
+				        </div>
+				        <h3>Versão</h3>
+				        <div>
+				            <p><?php echo $teste[$i]['versao']; ?></p>
+				        </div>
+				        <h3>Ano</h3>
+				        <div>
+				            <p><?php echo $teste[$i]['ano']; ?></p>
+				        </div>
+				        <h3>Cor</h3>
+				        <div>
+				            <p><?php echo $teste[$i]['cor']; ?></p>
+				        </div>
+				    </div>
+				</div>
 		</div>
 	</div>
 </section>
+
+<section>
+	<div class="main" style="margin-top: -8%;">
+		<div class="tit">
+			<h1>Galeria de Fotos</h1>
+		</div>
+		
+		<div class="galeria">
+			<div class="img-item">
+				<img src="../admin/carNovos/air.jpg" class="img-p">
+				<img src="../admin/carNovos/ret.jpg" class="img-p">
+				<img src="../admin/carNovos/painel.jpg" class="img-p">
+			</div>
+		</div><br>
+
+		<div class="div-btn-car">	
+			<a href="pages/novos.php" class="btn-car">Falar com um consultor</a>
+		</div>
+
+	</div>
+</section>
+
+<?php  } ?>
 
 <section>
 	<div class="final">

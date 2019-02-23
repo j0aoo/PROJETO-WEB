@@ -86,7 +86,7 @@
 				<ul>
 					<li><h4 class="li-p">Carros Novos</h4>
 						<ul class="link-menu">
-							<li><a href="" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Cadastrar</a></li>
+							<li><a href="?page=CadNovos" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Cadastrar</a></li>
 							<li><a href="" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Alterar</a></li>
 							<li><a href="" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar / Excluir</a></li>
 						</ul>
