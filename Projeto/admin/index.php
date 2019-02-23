@@ -1,3 +1,22 @@
+<?php
+
+	session_start();
+	$name = $_SESSION["log"];
+
+	if (!isset($_SESSION["log"])) {
+		
+		header("Location: http://localhost/PROJETO-WEB/Projeto/admin/login.php");
+
+	}
+
+	if (isset($_GET['sair']) == 1) {
+		
+		session_destroy();
+		header("Location: http://localhost/PROJETO-WEB/Projeto/admin/login.php");
+
+	}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,12 +50,12 @@
 				<img src="https://siderg.com.br/uploads/default.png" class="img-ad">
 				<ul class="nav-drop">
 					<li>
-						<a href=""><h4>Sair</h4></a>
+						<a href="?sair=1"><h4>Sair</h4></a>
 					</li>
 				</ul>
 			</li>
 		</ul>
-		<p>Name</p>
+		<p><?php echo $name ?></p>
 	</div>
 </div>
 
@@ -63,6 +82,17 @@
 					<li><h4 class="li-p">Emails cadastrados</h4>
 						<ul class="link-menu">
 							<li><a href="?page=consultaEmail" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</a>
+		<a href="">
+			<div class="link">
+				<ul>
+					<li><h4 class="li-p">Assistencia tecnica</h4>
+						<ul class="link-menu">
+							<li><a href="?page=consultaAss" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar</a></li>
 						</ul>
 					</li>
 				</ul>

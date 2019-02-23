@@ -42,7 +42,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<!-- apenas teste-->
@@ -69,19 +69,25 @@
 <div class="bx-menu">
 	<ul class="ul-nav">
 		<li>
-			<a href="">NOVOS |</a>
+			<a href="index.php">HOME |</a>
 		</li>
 		<li>
-			<a href="">SEMINOVOS |</a>
+			<a href="pages/novos.php">NOVOS |</a>
 		</li>
 		<li>
-			<a href="">PEÇAS |</a>
+			<a href="pages/seminovos.php">SEMINOVOS |</a>
 		</li>
 		<li>
-			<a href="">CONSÓRCIO |</a>
+			<a href="pages/pecas.php">PEÇAS |</a>
 		</li>
 		<li>
-			<a href="">CONTATO |</a>
+			<a href="pages/assist.php">ASSISTENCIA TECNICA |</a>
+		</li>
+		<li>
+			<a href="pages/consorcio.php">CONSÓRCIO |</a>
+		</li>
+		<li>
+			<a href="pages/contato.php">CONTATO |</a>
 		</li>
 	</ul>
 </div>

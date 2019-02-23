@@ -5,17 +5,20 @@
 
 	class AdminDAO {
 
-		public function Login ($login) {
+		public function Logar($login, $senha) {
 		
 			$con = new Conexao();
 			$stmt = $con->Conexao();
 			
-			$sql = $stmt->prepare("SELECT * FROM admin WHERE login = ?");
+			$sql = $stmt->prepare("SELECT * FROM admin WHERE login = ? AND senha = ?");
 			$sql->bindParam(1, $login);
+			$sql->bindParam(2, $senha);
 
 			if ($sql->execute()) {
 			
-				echo "<script>alert('deu crt')</script>";
+				echo "
+					<script> location.href='http://localhost/PROJETO-WEB/Projeto/admin/index.php' </script>
+				";
 			
 			} else {
 

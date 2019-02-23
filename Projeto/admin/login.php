@@ -1,4 +1,21 @@
 <?php
+	
+	session_start();
+	
+	include_once("Admin.php");
+	include_once("AdminDAO.php");
+	
+	$admin = new Admin();
+	$adminDAO = new AdminDAO();
+
+	if (isset($_POST['login'])) {
+			
+		$_SESSION["log"] = $_POST['login'];
+
+		$adminDAO->Logar($_POST['login'], $_POST['senha']);
+
+	}
+
 
 ?>
 <!DOCTYPE html>

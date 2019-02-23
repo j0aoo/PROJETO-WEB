@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/styleS.CSS">
 
 <nav class="nav-menu">
 	<div class="logo">
@@ -11,7 +11,7 @@
 <div class="bx-menu">
 	<ul class="ul-nav">
 		<li>
-			<a href="novos.php">HOME |</a>
+			<a href="../index.php">HOME |</a>
 		</li>
 		<li>
 			<a href="novos.php">NOVOS |</a>
@@ -21,6 +21,9 @@
 		</li>
 		<li>
 			<a href="pecas.php">PEÇAS |</a>
+		</li>
+		<li>
+			<a href="assist.php">ASSISTENCIA TECNICA |</a>
 		</li>
 		<li>
 			<a href="consorcio.php">CONSÓRCIO |</a>

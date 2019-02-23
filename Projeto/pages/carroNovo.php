@@ -151,7 +151,7 @@
 						echo '
 							<img src="../admin/carNovos/'.$teste[$i]['nomeImage2'].'" class="img-p">
 							<img src="../admin/carNovos/'.$teste[$i]['nomeImage3'].'" class="img-p">
-							<img src="../admin/carNovos/'.$teste[$i]['nomeImage34'].'" class="img-p">
+							<img src="../admin/carNovos/'.$teste[$i]['nomeImage4'].'" class="img-p">
 						';
 					}
 				
