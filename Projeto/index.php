@@ -4,7 +4,13 @@
 	include_once("./admin/EmailDAO.PHP");
 	
 	$email = new Email();
-	$emailDAO = new EmailDAO();	 
+	$emailDAO = new EmailDAO();	
+
+	include_once("./admin/Novos.php");
+	include_once("./admin/NovosDAO.php");
+	
+	$novos = new Novos();
+	$novosDAO = new NovosDAO(); 
 
 	if (isset($_POST['emailCad'])) {
 
@@ -29,7 +35,6 @@
 	}
 
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -115,32 +120,34 @@
 <section>
 	<div class="ofertas">
 		<div class="h-txt-ofertas">
-			<h1 class="txt-linha-h1">Linha Volkswagen</h1>
+			<h1 class="txt-linha-h1">Linha Novos</h1>
 			<p class="txt-linha-p">Conheça nossas melhores ofertas</p>
 		</div>
 		<div class="carros-o">
-			<div class="itemCar">
-				<img src="img/car.jpg" class="img-car-index">
-				<h4>Name car</h4>
-			</div>
-			<div class="itemCar">
-				<img src="img/car.jpg" class="img-car-index">
-				<h4>Name car</h4>
-			</div>
-			<div class="itemCar">
-				<img src="img/car.jpg" class="img-car-index">
-				<h4>Name car</h4>
-			</div>
-			<div class="itemCar">
-				<img src="img/car.jpg" class="img-car-index">
-				<h4>Name car</h4>
-			</div>
+			<?php
+
+				$teste = $novosDAO->ListarCarrosl();
+							
+				for ($i=0; $i < count($teste); $i++) {
+
+					echo '
+						<div class="itemCar">
+							<img src="./admin/carNovos/'.$teste[$i]['nomeImage'].'" class="img-car-index">
+							<h4>'.$teste[$i]['nome'].'</h4>
+						</div>
+					';
+
+				}
+
+			?>
+			
 		</div><br>
 		<div class="div-btn-car">	
 			<a href="pages/novos.php" class="btn-car">TODA A LINHA</a>
 		</div>
 	</div>
 </section>
+
 
 <section>
 	<div class="mais-p">

@@ -1,10 +1,10 @@
 <?php
 
-	include_once("Orcamento.php");
-	include_once("OrcamentoDAO.php");
+	include_once("OrcCar.php");
+	include_once("OrcCarDAO.php");
 	
-	$orcamento = new Orcamento();
-	$orcamentoDAO = new OrcamentoDAO();
+	$orcamento = new OrcCar();
+	$orcamentoDAO = new OrcCarDAO();
 
 	if (isset($_POST['nome'])) {
 		
@@ -12,13 +12,13 @@
 
 	} else {
 
-		$teste = $orcamentoDAO->ListarOrcamento();
+		$teste = $orcamentoDAO->ListarOrc();
 
 	}
 
 	if (isset($_POST['todos'])) {
 		
-		$teste = $orcamentoDAO->ListarOrcamento();
+		$teste = $orcamentoDAO->ListarOrc();
 
 	}
 
@@ -36,7 +36,7 @@
 <div class="geral-consulta">
 
 	<div class="txt">
-		<h1>Solicitação de contato de ORÇAMENTO PARA CARROS</h1>
+		<h1>Solicitação de contato - CARROS NOVOS</h1>
 	</div>
 
 	<div class="form-busca">
@@ -69,16 +69,16 @@
 
 					if ($_GET['acao'] == "del") {
 
-						$teste = $orcamentoDAO->DeletarOrcamento($id);
+						$teste = $orcamentoDAO->DeletarOrc($id);
 						
-						$teste = $orcamentoDAO->ListarOrcamento();
+						$teste = $orcamentoDAO->ListarOrc();
 					
 					}
 
 					if ($_REQUEST['acao'] == "status") {
 						
 						$orcamentoDAO->AtualizaStatus($id);
-						$teste = $orcamentoDAO->ListarOrcamento();
+						$teste = $orcamentoDAO->ListarOrc();
 
 					}
 
@@ -90,7 +90,7 @@
 					if ($teste[$i]['stat'] == 'Nlida') {
 						
 						$class = "table-hover-Nlida	";
-						$txt = '<a href="?page=PedidoOrcamento&acao=status&id='.$teste[$i]["id"].'" class="a-trash"> Marcar como lida</a>';
+						$txt = '<a href="?page=PedidoCarro&acao=status&id='.$teste[$i]["id"].'" class="a-trash"> Marcar como lida</a>';
 
 					}
 
@@ -109,7 +109,7 @@
 							<td>'.$teste[$i]["telefone"].'</td>
 							<td>'.$teste[$i]["email"].'</td>
 							<td>'.$txt.'</td>
-							<td><a href="?page=PedidoOrcamento&acao=del&id='.$teste[$i]["id"].'" class="a-trash"><i class="fa fa-trash" aria-hidden="true"></i> Deletar</a></td>
+							<td><a href="?page=PedidoCarro&acao=del&id='.$teste[$i]["id"].'" class="a-trash"><i class="fa fa-trash" aria-hidden="true"></i> Deletar</a></td>
 						</tr>
 
 					';

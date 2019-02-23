@@ -6,11 +6,29 @@
 	$novos = new Novos();
 	$novosDAO = new NovosDAO();
 
+	include_once("Email.php");
+	include_once("EmailDAO.php");
+	
+	$email = new Email();
+	$emailDAO = new EmailDAO();
+
 	if (isset($_POST['nome']) && isset($_FILES['arquivo'])) {
 		
 		$ext = strtolower(substr($_FILES['arquivo']['name'], -4));
 		$novoNome = microtime().$ext;
 		$diretorio = "carNovos/";
+
+		$ext2 = strtolower(substr($_FILES['arquivo2']['name'], -4));
+		$novoNome2 =  1+microtime().$ext2;
+		$diretorio2 = "carNovos/";
+
+		$ext3 = strtolower(substr($_FILES['arquivo3']['name'], -4));
+		$novoNome3 = 2+microtime().$ext3;
+		$diretorio3 = "carNovos/";
+
+		$ext4 = strtolower(substr($_FILES['arquivo4']['name'], -4));
+		$novoNome4 = 3+microtime().$ext4;
+		$diretorio4 = "carNovos/";
 
 		$novos->setNome($_POST['nome']);
 		$novos->setAno($_POST['ano']);
@@ -19,11 +37,35 @@
 		$novos->setCor($_POST['cor']);
 		$novos->setMarca($_POST['marca']);
 		$novos->setNomeImage($novoNome);
+		$novos->setNomeImage2($novoNome2);
+		$novos->setNomeImage3($novoNome3);
+		$novos->setNomeImage4($novoNome4);
 		
 		move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio.$novoNome);
+		move_uploaded_file($_FILES['arquivo2']['tmp_name'], $diretorio2.$novoNome2);
+		move_uploaded_file($_FILES['arquivo3']['tmp_name'], $diretorio3.$novoNome3);
+		move_uploaded_file($_FILES['arquivo4']['tmp_name'], $diretorio4.$novoNome4);
 
 		$novosDAO->InsereCarro($novos);
 	
+		$teste = $emailDAO->ListarEmail();
+							
+		for ($i=0; $i < count($teste); $i++) {
+			
+			$assunto = "Novo carro em oferta!";
+			$mensagem = "A concessionário Auto Sports agora está com um novo carro em oferta, confira!";	
+		
+			$to = "dk.joao12@gmail.com";
+			$subject = "$assunto";
+			$message = "$mensagem";
+			$header = "MIME-Version: 1.0 \r\n";
+			$header .= "Content-type: text/html; charset=iso-8859-1\r\n";
+			$header .= "From ".$teste[$i]['email'];
+
+			mail($to, $subject, $message, $header);
+
+		}		
+
 	}
 
 ?>
@@ -105,6 +147,18 @@
 
 			<span>Foto</span><br>
 			<input type="file" name="arquivo" placeholder="Foto" required
+			class="form-jc"><br>
+
+			<span>Foto - galeria</span><br>
+			<input type="file" name="arquivo2" placeholder="Foto" required
+			class="form-jc"><br>
+
+			<span>Foto - galeria</span><br>
+			<input type="file" name="arquivo3" placeholder="Foto" required
+			class="form-jc"><br>
+
+			<span>Foto - galeria</span><br>
+			<input type="file" name="arquivo4" placeholder="Foto" required
 			class="form-jc"><br>
 
 			<input type="submit" value="Cadastrar" id="btn-sand" class="form-jc">

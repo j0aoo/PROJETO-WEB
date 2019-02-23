@@ -9,6 +9,9 @@
 		private $marca;
 		private $cor;
 		private $NomeImage;
+		private $NomeImage2;
+		private $NomeImage3;
+		private $NomeImage4;
 
 		public function getNome() {
 		
@@ -103,6 +106,48 @@
 		public function setNomeImage($nomeImage) {
 		
 			$this->nomeImage = $nomeImage;
+			
+			return $this;
+		
+		}
+
+		public function getNomeImage2() {
+		
+			return $this->nomeImage2;
+		
+		}
+		
+		public function setNomeImage2($nomeImage2) {
+		
+			$this->nomeImage2 = $nomeImage2;
+			
+			return $this;
+		
+		}
+
+		public function getNomeImage3() {
+		
+			return $this->nomeImage3;
+		
+		}
+		
+		public function setNomeImage3($nomeImage3) {
+		
+			$this->nomeImage3 = $nomeImage3;
+			
+			return $this;
+		
+		}
+
+		public function getNomeImage4() {
+		
+			return $this->nomeImage4;
+		
+		}
+		
+		public function setNomeImage4($nomeImage4) {
+		
+			$this->nomeImage4 = $nomeImage4;
 			
 			return $this;
 		

@@ -41,7 +41,7 @@
 
 	<div class="form-busca">
 		<form method="post">
-			<input type="text" name="nome" placeholder="Nome" required maxlength="100" class="form-b">
+			<input type="text" name="nome" placeholder="Nome" required maxlength="'" th="100" class="form-b">
 			<input type="submit" value="Buscar" class="form-s">
 		</form>
 		<form method="post">
@@ -57,6 +57,7 @@
 				<th>ID</th>
 				<th>Nome</th>
 				<th>Telefone</th>
+				<th>Email</th>
 				<th>Status</th>
 			</tr>
 			
@@ -105,6 +106,7 @@
 						<tr align="center" class='.$class.'>
 							<td>'.$teste[$i]["id"].'</td>
 							<td>'.$teste[$i]["nome"].'</td>
+							<td>'.$teste[$i]["telefone"].'</td>
 							<td>'.$teste[$i]["email"].'</td>
 							<td>'.$txt.'</td>
 							<td><a href="?page=PedidoPecas&acao=del&id='.$teste[$i]["id"].'" class="a-trash"><i class="fa fa-trash" aria-hidden="true"></i> Deletar</a></td>

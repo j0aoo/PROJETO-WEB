@@ -11,6 +11,9 @@
 <div class="bx-menu">
 	<ul class="ul-nav">
 		<li>
+			<a href="novos.php">HOME |</a>
+		</li>
+		<li>
 			<a href="novos.php">NOVOS |</a>
 		</li>
 		<li>

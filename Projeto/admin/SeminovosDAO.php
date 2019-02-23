@@ -101,6 +101,34 @@
 			return $sql->fetchAll();
 		
 		}// fim Listar
+
+		public function DeletarCarros($id) {
+			
+			$con = new Conexao();
+			$stmt = $con->Conexao();
+			
+			$sql = $stmt->prepare("DELETE FROM `semi` WHERE `id` = ?;");
+			$sql->bindParam(1, $id);
+
+			if ($sql->execute()) {
+				
+				echo "
+					<script> alert('Deletado com sucesso!');
+				 		location.href='http://localhost/PROJETO-WEB/Projeto/admin/?page=ConsultaSemi';
+				 	</script>
+				";
+							
+			} else {
+				
+				echo "
+					<script> alert('Erro ao deletar!');
+				 		location.href='http://localhost/PROJETO-WEB/Projeto/admin/?page=ConsultaSemi';
+				 	</script>
+				";
+				
+			}
+			
+		}// fim Deletar
 		
 	}
 	

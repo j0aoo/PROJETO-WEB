@@ -6,6 +6,12 @@
 	$seminovos = new Seminovos();
 	$seminovosDAO = new SeminovosDAO();
 
+	include_once("Email.php");
+	include_once("EmailDAO.php");
+	
+	$email = new Email();
+	$emailDAO = new EmailDAO();
+
 	if (isset($_POST['nome']) && isset($_FILES['arquivo'])) {
 		
 		$ext = strtolower(substr($_FILES['arquivo']['name'], -4));
@@ -24,6 +30,24 @@
 		move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio.$novoNome);
 
 		$seminovosDAO->InsereCarro($seminovos);
+	
+		$teste = $emailDAO->ListarEmail();
+							
+		for ($i=0; $i < count($teste); $i++) {
+			
+			$assunto = "Novo carro em oferta!";
+			$mensagem = "A concessionário Auto Sports agora está com um novo carro em oferta, confira!";	
+		
+			$to = "dk.joao12@gmail.com";
+			$subject = "$assunto";
+			$message = "$mensagem";
+			$header = "MIME-Version: 1.0 \r\n";
+			$header .= "Content-type: text/html; charset=iso-8859-1\r\n";
+			$header .= "From ".$teste[$i]['email'];
+
+			mail($to, $subject, $message, $header);
+
+		}
 	
 	}
 

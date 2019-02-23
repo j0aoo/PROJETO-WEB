@@ -7,6 +7,25 @@
 	$novosDAO = new NovosDAO();
 
 ?>
+<?php
+	
+	include_once("../admin/OrcCar.php");
+	include_once("../admin/OrcCarDAO.php");
+	
+	$orcCar = new OrcCar();
+	$orcCarDAO = new OrcCarDAO();
+	
+	if (isset($_POST['nome'])) {
+
+		$orcCar->setNome($_POST['nome']);
+		$orcCar->setTelefone($_POST['tel']);
+		$orcCar->setEmail($_POST['email']);
+		
+		$orcCarDAO->InsereOrc($orcCar);
+	
+	}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,6 +35,7 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
 	<link rel="stylesheet" type="text/css" href="css/styleCarN.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstraps.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<!-- apenas teste-->
@@ -28,6 +48,10 @@
 	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 	<script
   	src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -109,6 +133,7 @@
 		</div>
 	</div>
 </section>
+<?php  } ?>
 
 <section>
 	<div class="main" style="margin-top: -8%;">
@@ -118,20 +143,31 @@
 		
 		<div class="galeria">
 			<div class="img-item">
-				<img src="../admin/carNovos/air.jpg" class="img-p">
-				<img src="../admin/carNovos/ret.jpg" class="img-p">
-				<img src="../admin/carNovos/painel.jpg" class="img-p">
+				<?php
+
+					$teste = $novosDAO->ListaUnica($_GET['id']);
+								
+					for ($i=0; $i < count($teste); $i++) {
+						echo '
+							<img src="../admin/carNovos/'.$teste[$i]['nomeImage2'].'" class="img-p">
+							<img src="../admin/carNovos/'.$teste[$i]['nomeImage3'].'" class="img-p">
+							<img src="../admin/carNovos/'.$teste[$i]['nomeImage34'].'" class="img-p">
+						';
+					}
+				
+				?>				
+				
 			</div>
 		</div><br>
 
 		<div class="div-btn-car">	
-			<a href="pages/novos.php" class="btn-car">Falar com um consultor</a>
+			<a href="pages/novos.php" class="btn-car" data-toggle="modal" data-target="#exampleModal">Falar com um consultor</a>
 		</div>
 
 	</div>
 </section>
 
-<?php  } ?>
+
 
 <section>
 	<div class="final">
@@ -196,6 +232,44 @@
 		</div>
 	</div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Fale com um consultor!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="gd">
+			<form id="form-contact" method="post">
+				
+				<span>Nome</span><br>
+				<input type="text" name="nome" placeholder="Nome" required
+				 maxlength="100" class="form-jc"><br>
+
+				<span>Telefone</span><br>
+				<input type="text" name="tel" id="tele" placeholder="Telefone" required
+				 maxlength="16" class="form-jc"><br>
+
+				<span>Email</span><br>
+				<input type="email" name="email" placeholder="Email" required
+				 maxlength="100" class="form-jc"><br>
+
+			
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <input type="submit" class="btn btn-primary" value="Solicitar contato">
+        </form>	
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

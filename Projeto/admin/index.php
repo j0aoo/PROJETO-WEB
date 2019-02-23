@@ -60,6 +60,17 @@
 		<a href="">
 			<div class="link">
 				<ul>
+					<li><h4 class="li-p">Emails cadastrados</h4>
+						<ul class="link-menu">
+							<li><a href="?page=consultaEmail" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</a>
+		<a href="">
+			<div class="link">
+				<ul>
 					<li><h4 class="li-p">Cores (Para carros)</h4>
 						<ul class="link-menu">
 							<li><a href="?page=CadstroCor" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Cadastrar</a></li>
@@ -87,8 +98,7 @@
 					<li><h4 class="li-p">Carros Novos</h4>
 						<ul class="link-menu">
 							<li><a href="?page=CadNovos" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Cadastrar</a></li>
-							<li><a href="" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Alterar</a></li>
-							<li><a href="" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar / Excluir</a></li>
+							<li><a href="?page=ConsultaNovos" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -100,8 +110,7 @@
 					<li><h4 class="li-p">Carros Seminovos</h4>
 						<ul class="link-menu">
 							<li><a href="?page=CadSemi" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Cadastrar</a></li>
-							<li><a href="" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Alterar</a></li>
-							<li><a href="" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar / Excluir</a></li>
+							<li><a href="?page=ConsultaSemi" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -132,6 +141,17 @@
 		<a href="">
 			<div class="link">
 				<ul>
+					<li><h4 class="li-p">Pedido de contato - CARRO NOVO</h4>
+						<ul class="link-menu">
+							<li><a href="?page=PedidoCarro" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</a>
+		<a href="">
+			<div class="link">
+				<ul>
 					<li><h4 class="li-p">Pedido de contato - PEÇAS</h4>
 						<ul class="link-menu">
 							<li><a href="?page=PedidoPecas" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar</a></li>
@@ -147,6 +167,22 @@
 						<ul class="link-menu">
 							<li><a href="?page=PedidoConsorcio" class="item-link"><i class="fa fa-circle-o" aria-hidden="true"></i> Consultar</a></li>
 						</ul>
+					</li>
+				</ul>
+			</div>
+		</a>
+		<a href="">
+			<div class="link">
+				<ul>
+					<li><h4 class="li-p"></h4>
+					</li>
+				</ul>
+			</div>
+		</a>
+		<a href="">
+			<div class="link">
+				<ul>
+					<li><h4 class="li-p"></h4>
 					</li>
 				</ul>
 			</div>
