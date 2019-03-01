@@ -55,6 +55,14 @@
 	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" integrity="sha256-gVCm5mRCmW9kVgsSjQ7/5TLtXqvfCoxhdsjE6O1QLm8=" crossorigin="anonymous" />
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js" integrity="sha256-399DNRyfIpWIy1ZV0KmEIIuIQ5sBHdLu9MBtVHrNtt8=" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		new WOW().init();
+	</script>
 </head>
 <body>
 
@@ -108,7 +116,7 @@
 
 <section>
 	<div class="nv-smv">
-		<div class="seminovos-h">
+		<div class="seminovos-h wow fadeInRight">
 			<a href="pages/seminovos.php" class="er"><h1 class="h-semi">Seminovos</h1></a>
 			<p class="header-sn">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua.
