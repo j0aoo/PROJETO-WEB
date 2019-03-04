@@ -42,7 +42,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<!-- apenas teste-->
@@ -172,7 +172,7 @@
 		<div class="geral-items">
 			<div class="item-carac">
 				<img src="img/teste1.gif" class="img-carac">
-				<h3 class="h3-carac">Agilidade</h3>
+				<h3 class="h3-carac">Motores revisados</h3>
 			</div>
 			<div class="item-carac">
 				<img src="img/teste2.gif" class="img-carac">
@@ -180,7 +180,7 @@
 			</div>
 			<div class="item-carac">
 				<img src="img/teste4.gif" class="img-carac">
-				<h3 class="h3-carac">Agilidade</h3>
+				<h3 class="h3-carac">Grantia</h3>
 			</div>
 		</div>
 	</div>
