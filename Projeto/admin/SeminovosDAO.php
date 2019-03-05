@@ -52,6 +52,26 @@
 	
 		}// fim insere
 
+		public function ListarFilter($marca, $preco) {
+		
+			$con = new Conexao();
+			$stmt = $con->Conexao();
+			
+			$precoTeste = "";
+
+			if ($preco == 1) {
+				$precoTeste = "preco BETWEEN 5000 AND 20000";
+			}
+
+			$sql = $stmt->prepare("SELECT * FROM `semi` WHERE `marca` = ? AND ".$precoTeste."");
+			$sql->bindParam(1, $marca);
+
+			$sql->execute();
+		
+			return $sql->fetchAll();
+		
+		}// fim Listar
+
 		public function ListarCor() {
 		
 			$con = new Conexao();

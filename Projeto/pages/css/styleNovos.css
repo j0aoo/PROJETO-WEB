@@ -55,6 +55,7 @@ body {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	padding-top: 30px;
 }
 
 .conjCar h3 {
@@ -120,6 +121,10 @@ body {
 }
 
 .imgCar {
-	width: 370px;
+	width: auto;
 	height: 183px;
+	vertical-align: middle;
+	display: block;
+    max-width: 100%;
 }
+

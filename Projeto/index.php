@@ -42,7 +42,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<!-- apenas teste-->
@@ -83,7 +83,7 @@
 			<a href="pages/novos.php">NOVOS |</a>
 		</li>
 		<li>
-			<a href="pages/seminovos.php">SEMINOVOS |</a>
+			<a href="pages/seminovos.php">SEMI-NOVOS |</a>
 		</li>
 		<li>
 			<a href="pages/pecas.php">PEÇAS |</a>
@@ -102,7 +102,7 @@
 
 <section>
 	<div class="header">
-	
+		
 	</div>
 </section>
 
@@ -117,7 +117,7 @@
 <section>
 	<div class="nv-smv">
 		<div class="seminovos-h wow fadeInRight">
-			<a href="pages/seminovos.php" class="er"><h1 class="h-semi">Seminovos</h1></a>
+			<a href="pages/seminovos.php" class="er"><h1 class="h-semi">Semi-novos</h1></a>
 			<p class="header-sn">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua.
 			</p>
@@ -134,8 +134,8 @@
 <section>
 	<div class="ofertas">
 		<div class="h-txt-ofertas">
-			<h1 class="txt-linha-h1">Linha Novos</h1>
-			<p class="txt-linha-p">Conheça nossas melhores ofertas</p>
+			<h1 class="txt-linha-h1">Melhores Ofertas</h1>
+			<p class="txt-linha-p">CARROS INCRÍVEIS COM PREÇOS IMPERDÍVEIS</p>
 		</div>
 		<div class="carros-o">
 			<?php

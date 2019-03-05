@@ -17,7 +17,7 @@
 			<a href="novos.php">NOVOS |</a>
 		</li>
 		<li>
-			<a href="seminovos.php">SEMINOVOS |</a>
+			<a href="seminovos.php">SEMI-NOVOS |</a>
 		</li>
 		<li>
 			<a href="pecas.php">PEÇAS |</a>

@@ -88,7 +88,7 @@
 	<div class="geral-info">
 		<div class="ld-1">
 			<div class="img-info">
-				<img src="imgCar/carhb20.jpg" class="img-car-p"><br>
+				<img src="../admin/carSemi/<?php echo $teste[$i]['nomeImage']; ?>" class="img-car-p"><br>
 				<div class="coisas-extras">
 					<div id="accordion">
 				        <h3>Marca</h3>

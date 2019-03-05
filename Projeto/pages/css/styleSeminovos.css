@@ -8,7 +8,7 @@ body {
 }
 
 .header {
-	background-image: url(https://www.socialbauru.com.br/wp-content/uploads/2018/04/feirao-carros-ibem-1240x540.png);
+	background-image: url('https://www.socialbauru.com.br/wp-content/uploads/2018/04/feirao-carros-ibem-1240x540.png');
 	min-height: 520px;
 	background-repeat: no-repeat;
 	width: 100%;
@@ -42,7 +42,7 @@ body {
 
 .geral-filter {
 	width: 100%;
-	min-height: 170px;
+	height: 170px;
 }
 
 .filter {
@@ -88,6 +88,11 @@ body {
 	max-height: 200px;
 	width: 280px;
 	border-radius: 4px;
+}
+
+.cars:hover {
+	opacity: 0.888;
+	transform: scale(1.02);
 }
 
 .cars a p {
@@ -172,4 +177,32 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding: 30px;
+}
+
+.form-teste {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 26px;
+}
+
+.form-grup {
+	padding-left: 30px;
+}
+
+.form-sec {
+	width: 200px;
+	height: 33px;
+	border-radius: 2px;
+	border: 1px solid grey;
+	color: #4F4F4F;
+}
+
+.btn-sec {
+	width: 100px;
+	height: 33px;
+	border-radius: 2px;
+	border: 1px solid grey;
+	color: #1C1C1C;
+	background-color: #87CEEB;
 }

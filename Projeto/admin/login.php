@@ -14,6 +14,12 @@
 
 		$adminDAO->Logar($_POST['login'], $_POST['senha']);
 
+	} else {
+
+		echo "
+			<script> Erro ao logar! </script>
+		";
+
 	}
 
 

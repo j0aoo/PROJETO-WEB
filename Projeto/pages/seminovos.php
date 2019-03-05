@@ -6,6 +6,19 @@
 	$seminovos = new Seminovos();
 	$seminovosDAO = new SeminovosDAO();
 
+	if (isset($_POST['marca']) && isset($_POST['preco'])) {
+		
+		$marca = $_POST['marca'];
+		$preco = $_POST['preco'];
+
+		$teste = $seminovosDAO->ListarFilter($marca, $preco);
+
+	} else {
+	
+		$teste = $seminovosDAO->ListarCarros();
+	
+	}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,19 +28,19 @@
 
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-	<link rel="stylesheet" type="text/css" href="css/styleSemi.css">
+	<link rel="stylesheet" type="text/css" href="css/styleSeminovos.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<!-- apenas teste-->
 	<link href="https://fonts.googleapis.com/css?family=Lobster|Playfair+Display" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/themify/themify-icons.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/elegant-font/html-css/style.css">
 </head>
 <body>
 
@@ -50,9 +63,45 @@
 <section>
 	<div class="geral-filter">
 		<div class="filter">
-			<div class="">
-				Espaço para filtros
-			</div>
+			<form method="post" class="form-teste">
+
+				<div class="form-grup">
+					<span>Marca</span><br>
+					<select name="marca" class="form-sec">
+						<option> - </option>
+						<?php
+
+							$testeMarcas = $seminovosDAO->ListarMarcas();
+									
+							for ($i=0; $i < count($testeMarcas); $i++) {
+							
+								echo '
+									<option value='.$testeMarcas[$i]['nome'].'>'.$testeMarcas[$i]['nome'].'</option>
+								';
+							
+							}
+
+						?>
+					</select>
+				</div>
+
+				<div class="form-grup">
+					<span>Preço</span><br>
+					<select name="preco" class="form-sec">
+						<option> - </option>
+						<option value="1"> 05.000 - 20.000 </option>
+						<option value="2"> 20.000 - 40.000 </option>
+						<option value="3"> 60.000 - 100.000 </option>
+						<option value="4"> + 100.000 </option>
+					</select>
+				</div>
+
+				<div class="form-grup">
+					<br>
+					<input type="submit" value="FILTRAR" class="btn-sec">
+				</div>
+
+			</form>
 		</div>
 	</div>
 </section>
@@ -66,8 +115,6 @@
 			<div class="cars-semi">
 				
 				<?php
-
-					$teste = $seminovosDAO->ListarCarros();
 								
 					for ($i=0; $i < count($teste); $i++) {
 					

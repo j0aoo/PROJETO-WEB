@@ -34,7 +34,7 @@
 
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-	<link rel="stylesheet" type="text/css" href="css/styleCarN.css">
+	<link rel="stylesheet" type="text/css" href="css/styleCarNovo.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstraps.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
