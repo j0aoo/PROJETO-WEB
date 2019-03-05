@@ -118,14 +118,12 @@
 	<div class="nv-smv">
 		<div class="seminovos-h wow fadeInRight">
 			<a href="pages/seminovos.php" class="er"><h1 class="h-semi">Semi-novos</h1></a>
-			<p class="header-sn">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.
+			<p class="header-sn">Oferecemos carros semi-novos em ótimo estado e regularizados garantindo seu conforto e segurança.
 			</p>
 		</div>
 		<div class="novos-h">
 			<a href="pages/novos.php" class="er"><h1 class="h-novos">Novos</h1></a>
-			<p class="header-pn">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua.
+			<p class="header-pn">Constantemente atualizamos nosso estoque sempre trazendo novidades, sempre pensando no seu conforto e bem estar.
 			</p>
 		</div>
 	</div>
