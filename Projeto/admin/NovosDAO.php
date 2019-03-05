@@ -97,7 +97,7 @@
 			$con = new Conexao();
 			$stmt = $con->Conexao();
 			
-			$sql = $stmt->prepare("SELECT * FROM `novos` LIMIT 4");
+			$sql = $stmt->prepare("SELECT * FROM `novos` LIMIT 3");
 			$sql->execute();
 		
 			return $sql->fetchAll();

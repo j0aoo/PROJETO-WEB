@@ -137,10 +137,6 @@
 				?>
 			</select><br>
 
-			<span>Preco</span><br>
-			<input type="text" name="preco" placeholder="Preço" required
-			 maxlength="100" class="form-jc"><br>
-
 			<span>Versão</span><br>
 			<input type="text" name="versao" placeholder="Versão" required
 			 maxlength="100" class="form-jc"><br>

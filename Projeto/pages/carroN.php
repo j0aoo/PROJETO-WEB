@@ -33,8 +33,6 @@
 
 	<link rel="stylesheet" type="text/css" href="css/styleN.css">
 	<link rel="stylesheet" type="text/css" href="css/styleNT.css">
-	<link rel="stylesheet" type="text/css" href="css/styleNTO">
-	<link rel="stylesheet" type="text/css" href="mystyle.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<!-- apenas teste-->
@@ -69,6 +67,17 @@
         });
 	</script>
 
+	<script type="text/javascript">
+		function Muda(src) {
+			document.getElementById("princ").src=""+src;
+		}
+	</script>
+	<style type="text/css">
+		.img-car-p {
+			height: 400px auto;
+			width: 530px auto;
+		}
+	</style>
 </head>
 <body>
 
@@ -94,12 +103,15 @@
 	<div class="geral-info">
 		<div class="ld-1">
 			<div class="img-info">
-				<img src="../admin/carSemi/<?php echo $teste[$i]['nomeImage']; ?>" class="img-car-p" data-thumb="../admin/carSemi/<?php echo $teste[$i]['nomeImage']; ?>""><br>
+				<img src="../admin/carSemi/<?php echo $teste[$i]['nomeImage']; ?>" class="img-car-p" id="princ"><br>
 				<div class="img-outra">
-					<a href=""><img src="../admin/carSemi/<?php echo $teste[$i]['nomeImage2']; ?>""></a>
-					<a href=""><img src="imgCar/car.jpg"></a>
-					<a href=""><img src="imgCar/car.jpg"></a>
-					<a href=""><img src="imgCar/car.jpg"></a>
+					<img src="../admin/carSemi/<?php echo $teste[$i]['nomeImage']; ?>" onclick="Muda('../admin/carSemi/<?php echo $teste[$i]['nomeImage']; ?>')">
+					
+					<img src="../admin/carSemi/<?php echo $teste[$i]['nomeImage2']; ?>" onclick="Muda('../admin/carSemi/<?php echo $teste[$i]['nomeImage2']; ?>')">
+					
+					<img src="../admin/carSemi/<?php echo $teste[$i]['nomeImage3']; ?>" onclick="Muda('../admin/carSemi/<?php echo $teste[$i]['nomeImage3']; ?>')">
+					
+					<img src="../admin/carSemi/<?php echo $teste[$i]['nomeImage4']; ?>" onclick="Muda('../admin/carSemi/<?php echo $teste[$i]['nomeImage4']; ?>')">
 				</div>
 				<div class="coisas-extras">
 					<div id="accordion">
