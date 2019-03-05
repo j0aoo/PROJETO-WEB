@@ -1,20 +1,23 @@
 <?php
-
+	
 	session_start();
-	$name = $_SESSION["log"];
 
-	if (!isset($_SESSION["log"])) {
-		
-		header("Location: http://localhost/PROJETO-WEB/Projeto/admin/login.php");
-
+	if (!$_SESSION["log"]) {
+		header("Location: login.php");
 	}
 
-	if (isset($_GET['sair']) == 1) {
-		
+	if (isset($_GET['sair'])) {
 		session_destroy();
-		header("Location: http://localhost/PROJETO-WEB/Projeto/admin/login.php");
-
+		echo "
+			<script>
+				location.href = 'http://localhost/PROJETO-WEB/Projeto/admin/index.php';
+			</script>
+		";
 	}
+
+	if ($_SESSION["log"]) {
+		$name = $_SESSION["log"];
+	}	
 
 ?>
 <!DOCTYPE html>

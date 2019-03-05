@@ -18,6 +18,18 @@
 		$novoNome = microtime().$ext;
 		$diretorio = "carSemi/";
 
+		$ext2 = strtolower(substr($_FILES['arquivo2']['name'], -4));
+		$novoNome2 = 1+microtime().$ext2;
+		$diretorio2 = "carSemi/";
+
+		$ext3 = strtolower(substr($_FILES['arquivo3']['name'], -4));
+		$novoNome3 = 2+microtime().$ext3;
+		$diretorio3 = "carSemi/";
+
+		$ext4 = strtolower(substr($_FILES['arquivo4']['name'], -4));
+		$novoNome4 = 3+microtime().$ext4;
+		$diretorio4 = "carSemi/";
+
 		$seminovos->setNome($_POST['nome']);
 		$seminovos->setAno($_POST['ano']);
 		$seminovos->setPreco($_POST['preco']);
@@ -26,9 +38,15 @@
 		$seminovos->setCor($_POST['cor']);
 		$seminovos->setMarca($_POST['marca']);
 		$seminovos->setNomeImage($novoNome);
+		$seminovos->setNomeImage2($novoNome2);
+		$seminovos->setNomeImage3($novoNome3);
+		$seminovos->setNomeImage4($novoNome4);
 		
 		move_uploaded_file($_FILES['arquivo']['tmp_name'], $diretorio.$novoNome);
-
+		move_uploaded_file($_FILES['arquivo2']['tmp_name'], $diretorio2.$novoNome2);
+		move_uploaded_file($_FILES['arquivo3']['tmp_name'], $diretorio3.$novoNome3);
+		move_uploaded_file($_FILES['arquivo4']['tmp_name'], $diretorio4.$novoNome4);
+		
 		$seminovosDAO->InsereCarro($seminovos);
 	
 		$teste = $emailDAO->ListarEmail();
@@ -130,6 +148,18 @@
 
 			<span>Foto</span><br>
 			<input type="file" name="arquivo" placeholder="Foto" required
+			class="form-jc"><br>
+
+			<span>Foto</span><br>
+			<input type="file" name="arquivo2" placeholder="Foto" required
+			class="form-jc"><br>
+
+			<span>Foto</span><br>
+			<input type="file" name="arquivo3" placeholder="Foto" required
+			class="form-jc"><br>
+
+			<span>Foto</span><br>
+			<input type="file" name="arquivo4" placeholder="Foto" required
 			class="form-jc"><br>
 
 			<input type="submit" value="Cadastrar" id="btn-sand" class="form-jc">

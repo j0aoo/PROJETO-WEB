@@ -10,7 +10,7 @@
 			$con = new Conexao();
 			$stmt = $con->Conexao();
 			
-			$sql = $stmt->prepare("INSERT INTO semi(nome,ano,preco,km,versao,cor,marca,nomeImage) VALUES (?,?,?,?,?,?,?,?);");
+			$sql = $stmt->prepare("INSERT INTO semi(nome,ano,preco,km,versao,cor,marca,nomeImage,nomeImage2,nomeImage3,nomeImage4) VALUES (?,?,?,?,?,?,?,?,?,?,?);");
 			
 			$nome = $seminovos->getNome();
 			$ano = $seminovos->getAno();
@@ -20,6 +20,9 @@
 			$cor = $seminovos->getCor();
 			$marca = $seminovos->getMarca();
 			$foto = $seminovos->getNomeImage();
+			$foto2 = $seminovos->getNomeImage2();
+			$foto3 = $seminovos->getNomeImage3();
+			$foto4 = $seminovos->getNomeImage4();
 
 			$sql->bindParam(1, $nome);
 			$sql->bindParam(2, $ano);
@@ -29,6 +32,9 @@
 			$sql->bindParam(6, $cor);
 			$sql->bindParam(7, $marca);
 			$sql->bindParam(8, $foto);
+			$sql->bindParam(9, $foto2);
+			$sql->bindParam(10, $foto3);
+			$sql->bindParam(11, $foto4);
 			
 			if ($sql->execute()) {
 				

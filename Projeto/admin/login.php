@@ -1,27 +1,32 @@
 <?php
-	
-	session_start();
-	
+
 	include_once("Admin.php");
 	include_once("AdminDAO.php");
 	
 	$admin = new Admin();
 	$adminDAO = new AdminDAO();
 
-	if (isset($_POST['login'])) {
-			
-		$_SESSION["log"] = $_POST['login'];
+	if (isset($_POST['login']) && isset($_POST['senha'])) {
+	
+		$teste = $adminDAO->ListarAdmin();
+							
+		for ($i=0; $i < count($teste); $i++) {
+		
+			if ($teste[$i]['login'] == $_POST['login'] && $teste[$i]['senha'] == $_POST['senha']) {
+				
+				session_start();
+				$_SESSION["log"] = $_POST["login"];
+				header("Location: http://localhost/PROJETO-WEB/Projeto/admin/index.php");
 
-		$adminDAO->Logar($_POST['login'], $_POST['senha']);
-
-	} else {
-
-		echo "
-			<script> Erro ao logar! </script>
-		";
-
+			} else {
+				echo "
+					<script> alert('Erro ao logar!') </script>
+				";
+			}
+		
+		}		
+	
 	}
-
 
 ?>
 <!DOCTYPE html>

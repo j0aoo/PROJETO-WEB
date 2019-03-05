@@ -60,6 +60,9 @@
     
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
 
+    <script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
+
     <script
   	src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
   	integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
@@ -72,6 +75,28 @@
 	</script>
 
 </head>
+<style type="text/css">
+	
+	.img-item {
+		overflow: hidden;
+	}
+
+	.img-item img {
+		max-width: 100%;
+		-moz-transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+
+	.img-item img:hover {
+		-moz-transform: scale(1.1);
+		-webkit-transform: scale(1.1);
+		-o-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+
+</style>
 <body>
 
 <?php
@@ -271,5 +296,17 @@
   </div>
 </div>
 
+<script type="text/javascript">
+
+    $(document).ready(function () { 
+    
+        var $campoTelefone = $("#tele");
+    
+        $campoTelefone.mask('(99)9-9999-9999', {reverse: true});
+    
+    });
+
+        
+</script>
 </body>
 </html>

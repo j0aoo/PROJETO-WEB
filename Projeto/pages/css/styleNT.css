@@ -1,0 +1,18 @@
+.img-outra {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.img-outra img {
+	height: 100px;
+	width: 130px;
+	border: 1px solid #ddd;
+	opacity: 0.8;
+	margin: 2px 0px;
+}
+
+.img-outra a:hover {
+	opacity: 0.5;
+}

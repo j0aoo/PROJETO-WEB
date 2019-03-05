@@ -5,29 +5,6 @@
 
 	class AdminDAO {
 
-		public function Logar($login, $senha) {
-		
-			$con = new Conexao();
-			$stmt = $con->Conexao();
-			
-			$sql = $stmt->prepare("SELECT * FROM admin WHERE login = ? AND senha = ?");
-			$sql->bindParam(1, $login);
-			$sql->bindParam(2, $senha);
-
-			if ($sql->execute()) {
-			
-				echo "
-					<script> location.href='http://localhost/PROJETO-WEB/Projeto/admin/index.php' </script>
-				";
-			
-			} else {
-
-				echo "<script>alert('deu errado')</script>";
-
-			}
-		
-		}// fim login
-
 		public function InsereAdmin (Admin $admin) {
 		
 			$con = new Conexao();

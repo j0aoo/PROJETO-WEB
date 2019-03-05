@@ -32,6 +32,9 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
 	<link rel="stylesheet" type="text/css" href="css/styleN.css">
+	<link rel="stylesheet" type="text/css" href="css/styleNT.css">
+	<link rel="stylesheet" type="text/css" href="css/styleNTO">
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<!-- apenas teste-->
@@ -51,6 +54,9 @@
   	crossorigin="anonymous"></script>
     
     <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+
+    <script type="text/javascript" src="js/jquery-3.0.0.js"></script>
+    <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
 
     <script
   	src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
@@ -88,7 +94,13 @@
 	<div class="geral-info">
 		<div class="ld-1">
 			<div class="img-info">
-				<img src="../admin/carSemi/<?php echo $teste[$i]['nomeImage']; ?>" class="img-car-p"><br>
+				<img src="../admin/carSemi/<?php echo $teste[$i]['nomeImage']; ?>" class="img-car-p" data-thumb="../admin/carSemi/<?php echo $teste[$i]['nomeImage']; ?>""><br>
+				<div class="img-outra">
+					<a href=""><img src="../admin/carSemi/<?php echo $teste[$i]['nomeImage2']; ?>""></a>
+					<a href=""><img src="imgCar/car.jpg"></a>
+					<a href=""><img src="imgCar/car.jpg"></a>
+					<a href=""><img src="imgCar/car.jpg"></a>
+				</div>
 				<div class="coisas-extras">
 					<div id="accordion">
 				        <h3>Marca</h3>
@@ -135,7 +147,7 @@
 						<input type="text" name="nome" placeholder="Nome" required class="form-jc"><br>
 
 						<span>Telefone</span><br>
-						<input type="text" name="tel" placeholder="Telefone" required class="form-jc"><br>
+						<input type="text" name="tel" placeholder="Telefone" id="tele" required class="form-jc"><br>
 
 						<span>Email</span><br>
 						<input type="email" name="email" placeholder="Email" required class="form-jc"><br><br>
@@ -215,5 +227,18 @@
 	</div>
 </section>
 
+
+<script type="text/javascript">
+
+    $(document).ready(function () { 
+    
+        var $campoTelefone = $("#tele");
+    
+        $campoTelefone.mask('(99)9-9999-9999', {reverse: true});
+    
+    });
+
+        
+</script>
 </body>
 </html>
